@@ -1,0 +1,70 @@
+import Image from "next/image";
+import Link from "next/link";
+
+const WHATSAPP_URL = "https://wa.me/447804450233";
+const ctaButtonBaseClass =
+  "inline-flex border-2 px-8 py-3 text-sm font-bold uppercase tracking-wide text-white transition duration-200";
+
+export function HomeCta() {
+  return (
+    <section className="pb-16 md:pb-20">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6">
+        <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-[#165f8c] via-[#1f77a8] to-[#0d4f78] px-5 py-7 text-white shadow-lg sm:px-8 sm:py-10 md:px-12 md:py-14">
+          <div className="pointer-events-none absolute inset-0 opacity-20 [background:radial-gradient(circle_at_20%_20%,#ffffff_0,transparent_40%),radial-gradient(circle_at_80%_80%,#ffffff_0,transparent_45%)]" />
+
+          <div className="relative grid items-center gap-6 sm:gap-8 lg:grid-cols-[1fr_1fr] lg:gap-10">
+            <div className="space-y-4 sm:space-y-6">
+              <h2 className="text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl md:text-5xl lg:whitespace-nowrap">
+                Rapid. Trusted. Professional.
+              </h2>
+
+              <p className="max-w-xl text-sm leading-7 text-sky-100 sm:text-base sm:leading-8 md:text-lg">
+                Family-run drainage specialists delivering dependable service, rapid response and
+                real value for money across the UK.
+              </p>
+
+              <div className="relative h-[190px] sm:h-[240px] md:hidden">
+                <Image
+                  src="/JetNow/JetNow%20Van%20Render.png"
+                  alt="Jet Now Drainage branded service van"
+                  fill
+                  sizes="100vw"
+                  className="object-contain object-right"
+                />
+              </div>
+
+              <p className="text-base font-bold sm:text-lg">Get in touch now for a free quote</p>
+
+              <div className="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:gap-3">
+                <Link
+                  href="/contact-us"
+                  className={`${ctaButtonBaseClass} border-white bg-[#ea591b] hover:border-[#ea591b] hover:bg-white hover:text-[#ea591b]`}
+                >
+                  Contact Us
+                </Link>
+                <Link
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${ctaButtonBaseClass} border-white bg-emerald-500 hover:border-emerald-500 hover:bg-white hover:text-emerald-500`}
+                >
+                  WhatsApp Us
+                </Link>
+              </div>
+            </div>
+
+            <div className="relative hidden h-[360px] md:block">
+              <Image
+                src="/JetNow/JetNow%20Van%20Render.png"
+                alt="Jet Now Drainage branded service van"
+                fill
+                sizes="(min-width: 1024px) 40vw, 90vw"
+                className="object-contain object-right drop-shadow-2xl lg:scale-110"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
