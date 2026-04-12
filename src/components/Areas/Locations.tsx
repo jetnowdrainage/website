@@ -67,7 +67,16 @@ const coverageAreas: CoverageArea[] = [
   {
     id: "essex",
     county: "Essex",
-    towns: ["Harlow", "Chelmsford", "Brentwood", "Basildon", "Colchester", "Epping"],
+    towns: [
+      "Harlow",
+      "Chelmsford",
+      "Brentwood",
+      "Basildon",
+      "Colchester",
+      "Epping",
+      "Southend-on-Sea",
+      "Braintree",
+    ],
     svgIds: ["GBESS"],
   },
   {
@@ -85,7 +94,7 @@ const coverageAreas: CoverageArea[] = [
   {
     id: "surrey",
     county: "Surrey",
-    towns: ["Guildford", "Woking", "Epsom", "Redhill", "Reigate", "Camberley"],
+    towns: ["Guildford", "Woking", "Epsom", "Redhill", "Reigate", "Camberley", "Farnham", "Leatherhead"],
     svgIds: ["GBSRY"],
   },
   {
@@ -322,9 +331,11 @@ export function HomeLocations() {
         el.style.cursor = "pointer";
         el.addEventListener("mouseenter", handleActivate);
         el.addEventListener("click", handleActivate);
+        el.addEventListener("pointerdown", handleActivate);
         eventCleanups.push(() => {
           el.removeEventListener("mouseenter", handleActivate);
           el.removeEventListener("click", handleActivate);
+          el.removeEventListener("pointerdown", handleActivate);
         });
       });
 
@@ -333,7 +344,7 @@ export function HomeLocations() {
 
     objectEls.forEach((objectEl, index) => {
       const mapKey = index === 0 ? "desktop" : "mobile";
-      const isInteractive = index === 0;
+      const isInteractive = true;
       const applyStyles = () => {
         const didStyle = styleMap(objectEl, isInteractive);
         if (didStyle) {
@@ -375,9 +386,8 @@ export function HomeLocations() {
           </h2>
 
           <p className="text-base leading-8 text-[var(--text-muted)]">
-            Jet Now Drainage supports residential and commercial properties across key counties in
-            and around London with fast response, planned maintenance and specialist drainage
-            solutions.
+            Jet Now Drainage provides fast response, cost effective, and expert drainage solutions
+            to all residential and commercial properties across London and the surrounding counties.
           </p>
 
           <div className="w-full max-w-[360px] rounded-xl border border-[var(--border)] bg-[var(--surface)] p-3 shadow-[0_18px_32px_-26px_rgba(15,23,42,0.28)] lg:hidden">
@@ -411,11 +421,19 @@ export function HomeLocations() {
                 onClick={() => setActiveAreaId(area.id)}
                 className={`flex items-center gap-2 rounded-md border px-3 py-2 text-left text-sm font-semibold transition ${
                   activeAreaId === area.id
-                    ? "border-emerald-500 bg-emerald-50 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300"
-                    : "border-[var(--border)] bg-[var(--surface)] text-[var(--text-muted)] hover:border-brand-primary"
+                    ? "border-emerald-500 bg-emerald-500 text-slate-950 shadow-[inset_0_1px_0_rgba(255,255,255,0.22)] dark:border-emerald-500 dark:bg-emerald-500 dark:text-slate-950"
+                    : "border-[var(--border)] bg-[var(--surface)] text-[var(--text-muted)] hover:border-emerald-500 hover:bg-emerald-50 hover:text-slate-900 dark:hover:bg-emerald-900/30 dark:hover:text-emerald-50"
                 }`}
               >
-                <span className="text-emerald-500">✓</span>
+                <span
+                  className={`transition ${
+                    activeAreaId === area.id
+                      ? "text-slate-950 dark:text-slate-950"
+                      : "text-emerald-500 dark:text-emerald-400"
+                  }`}
+                >
+                  ✓
+                </span>
                 <span>{area.county}</span>
               </button>
             ))}

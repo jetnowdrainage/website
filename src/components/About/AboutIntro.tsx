@@ -3,9 +3,9 @@ import Link from "next/link";
 
 const aboutHighlights = [
   "Independent, family-run drainage specialists",
-  "Serving London and the South East",
+  "Serving London, Essex and Hertfordshire",
   "Residential and commercial drainage support",
-  "Reliable response with modern equipment",
+  "Experienced engineers backed by the latest technology",
 ];
 
 export function AboutIntro() {
@@ -34,7 +34,7 @@ export function AboutIntro() {
           </p>
 
           <p className="text-base leading-8 text-[var(--text-muted)]">
-            Covering London and the South East, we provide responsive support for both urgent
+            Covering London, Essex and Hertfordshire, we provide responsive support for both urgent
             call-outs and planned maintenance work, helping clients keep drainage systems safe,
             compliant, and running smoothly.
           </p>

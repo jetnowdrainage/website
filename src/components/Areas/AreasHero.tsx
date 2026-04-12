@@ -20,6 +20,10 @@ export function AreasHero() {
 
       <div className="relative mx-auto flex min-h-[46vh] w-full max-w-7xl items-end px-6 pb-12 pt-16 md:min-h-[50vh] md:items-center md:pb-16">
         <div className="max-w-3xl space-y-5">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-200 md:text-sm">
+            Your drains, our expertise.
+          </p>
+
           <h1 className="text-4xl font-bold leading-tight tracking-tight text-white md:text-6xl">
             Areas We Cover
           </h1>

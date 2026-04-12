@@ -12,13 +12,13 @@ type ServiceCard = {
 const services: ServiceCard[] = [
   {
     id: "drain-unblocking",
-    title: "Drain Unblocking",
-    description: "Rapid clearance for blocked drains using safe methods that restore normal flow quickly.",
+    title: "Internal & External Unblocks",
+    description: "From blocked baths and toilets to blocked main sewers, we are fully equipped to handle any blockage.",
   },
   {
     id: "cctv-surveys",
     title: "CCTV Drain Surveys",
-    description: "Clear camera inspections to diagnose faults and provide practical recommendations fast.",
+    description: "Our skilled technicians use the latest technology to scan your system in order to confirm its condition.",
   },
   {
     id: "jetting",
@@ -32,13 +32,13 @@ const services: ServiceCard[] = [
   },
   {
     id: "emergency",
-    title: "Emergency Drain Services",
-    description: "Urgent call-out support for drainage issues to protect homes and business operations.",
+    title: "24/7 Emergency Response",
+    description: "We aim to be on site within 1-2 hours to prevent disruption to your home or business.",
   },
   {
     id: "drain-cleaning",
-    title: "Drain Cleaning",
-    description: "Routine cleaning programmes that keep drainage systems reliable and reduce future risk.",
+    title: "Drain Descaling",
+    description: "Descaling and maintaining your drainage system expands the lifespan and decreases the likelihood of blockages. We offer warranty on all descaling works.",
   },
 ];
 
@@ -74,7 +74,7 @@ export function ServicesGrid() {
                 key={service.id}
                 type="button"
                 onClick={() => toggleCard(service.id)}
-                className="group relative h-[260px] w-full overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--surface)] text-left shadow-[0_14px_30px_-24px_rgba(15,23,42,0.45)] transition hover:-translate-y-0.5"
+                className="group relative h-[260px] w-full overflow-hidden rounded-xl bg-[var(--surface)] text-left shadow-[0_14px_30px_-24px_rgba(15,23,42,0.45)] transition hover:-translate-y-0.5"
                 aria-pressed={isActive}
               >
                 <div
@@ -102,7 +102,7 @@ export function ServicesGrid() {
                     </div>
                   </div>
 
-                  <div className="absolute inset-0 flex [backface-visibility:hidden] [transform:rotateY(180deg)] items-end bg-[#03060a] p-5">
+                  <div className="absolute inset-0 flex [backface-visibility:hidden] [transform:rotateY(180deg)] items-end bg-brand-primary p-5">
                     <div className="space-y-3">
                       <p className="text-lg font-bold text-white">{service.title}</p>
                       <p className="min-h-[72px] text-sm leading-6 text-slate-200">{service.description}</p>
