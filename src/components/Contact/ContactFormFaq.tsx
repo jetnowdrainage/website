@@ -1,13 +1,11 @@
 const contactFaqs = [
   {
-    question: "How quickly can you respond to an enquiry?",
-    answer:
-      "We aim to respond promptly during business hours and prioritise urgent drainage enquiries as quickly as possible.",
+    question: "How quickly can you respond to emergency?",
+    answer: "We aim to attend within 1-2 hours. Our team respond 24 hours a day 7 days a week.",
   },
   {
-    question: "Do you provide emergency drainage call-outs?",
-    answer:
-      "Yes. We support emergency drainage issues and will advise on the fastest available response when you contact us.",
+    question: "How long does a CCTV survey take?",
+    answer: "A typical CCTV survey takes our technicians up to one hour to complete.",
   },
   {
     question: "Can I request a quote for planned drainage work?",

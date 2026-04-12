@@ -18,9 +18,10 @@ export function HomeCta() {
                 Rapid. Trusted. Professional.
               </h2>
 
-              <p className="max-w-xl text-sm leading-7 text-sky-100 sm:text-base sm:leading-8 md:text-lg">
-                Family-run drainage specialists delivering dependable service, rapid response and
-                real value for money across the UK.
+              <p className="max-w-xl text-sm leading-7 text-sky-100 sm:max-w-2xl sm:text-base sm:leading-8 md:text-lg">
+                Jet Now Drainage, a small family-operated business with customer service and
+                reputation at the heart of everything we do. We approach every job and customer
+                with the same level of passion and professionalism.
               </p>
 
               <div className="relative h-[190px] sm:h-[240px] md:hidden">

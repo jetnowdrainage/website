@@ -66,7 +66,16 @@ const coverageAreas: CoverageArea[] = [
   {
     id: "essex",
     county: "Essex",
-    towns: ["Harlow", "Chelmsford", "Brentwood", "Basildon", "Colchester", "Epping"],
+    towns: [
+      "Harlow",
+      "Chelmsford",
+      "Brentwood",
+      "Basildon",
+      "Colchester",
+      "Epping",
+      "Southend-on-Sea",
+      "Braintree",
+    ],
     svgIds: ["GBESS"],
   },
   {
@@ -84,7 +93,7 @@ const coverageAreas: CoverageArea[] = [
   {
     id: "surrey",
     county: "Surrey",
-    towns: ["Guildford", "Woking", "Epsom", "Redhill", "Reigate", "Camberley"],
+    towns: ["Guildford", "Woking", "Epsom", "Redhill", "Reigate", "Camberley", "Farnham", "Leatherhead"],
     svgIds: ["GBSRY"],
   },
   {
@@ -305,15 +314,17 @@ export function HomeLocations() {
         el.style.cursor = "pointer";
         el.addEventListener("mouseenter", handleActivate);
         el.addEventListener("click", handleActivate);
+        el.addEventListener("pointerdown", handleActivate);
         eventCleanups.push(() => {
           el.removeEventListener("mouseenter", handleActivate);
           el.removeEventListener("click", handleActivate);
+          el.removeEventListener("pointerdown", handleActivate);
         });
       });
     };
 
     objectEls.forEach((objectEl, index) => {
-      const isInteractive = index === 0;
+      const isInteractive = true;
       const applyStyles = () => styleMap(objectEl, isInteractive, 0);
       if (objectEl.contentDocument?.readyState === "complete") {
         applyStyles();
