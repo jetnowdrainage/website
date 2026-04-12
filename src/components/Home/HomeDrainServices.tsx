@@ -30,18 +30,18 @@ export function HomeDrainServices() {
             <span className="hidden md:inline">Drain Services Near You</span>
           </h2>
 
-          <p className="text-base leading-8 text-slate-700">
+          <p className="text-base leading-8 text-[var(--text-muted)]">
             Experiencing a blocked drain or a more complex drainage issue? Jet Now Drainage
             provides comprehensive drainage services designed to tackle problems quickly and
             professionally, helping your system run smoothly.
           </p>
 
-          <p className="text-base leading-8 text-slate-700">
+          <p className="text-base leading-8 text-[var(--text-muted)]">
             From planned maintenance to urgent callouts, our skilled engineers use modern
             equipment and proven methods to deliver lasting results and minimise disruption.
           </p>
 
-          <ul className="grid gap-3 text-base font-medium text-slate-700 sm:grid-cols-2">
+          <ul className="grid gap-3 text-base font-medium text-[var(--text-muted)] sm:grid-cols-2">
             {servicePoints.map((item) => (
               <li key={item} className="flex items-center gap-3">
                 <span className="h-2.5 w-2.5 rounded-full bg-brand-primary" aria-hidden />

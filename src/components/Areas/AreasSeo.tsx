@@ -165,18 +165,18 @@ export function AreasSeo() {
           <h2 className="text-3xl font-bold uppercase tracking-tight text-brand-primary md:text-4xl">
             Full Locations Covered
           </h2>
-          <p className="max-w-4xl text-sm leading-7 text-slate-700 md:text-base md:leading-8">
+          <p className="max-w-4xl text-sm leading-7 text-[var(--text-muted)] md:text-base md:leading-8">
             Jet Now Drainage covers London and surrounding counties, with local teams operating
             across the locations below.
           </p>
         </header>
 
-        <article className="rounded-xl border border-slate-200 bg-white p-5 shadow-[0_14px_30px_-24px_rgba(15,23,42,0.45)] md:p-6">
-          <div className="divide-y divide-slate-200">
+        <article className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5 shadow-[0_14px_30px_-24px_rgba(15,23,42,0.45)] md:p-6">
+          <div className="divide-y divide-[var(--border)]">
             {coverageByCounty.map((area) => (
               <div key={area.county} className="py-3 first:pt-0 last:pb-0">
-                <p className="text-sm font-semibold text-slate-900 md:text-base">{area.county}</p>
-                <p className="mt-1 text-sm leading-7 text-slate-700">{area.locations.join(", ")}</p>
+                <p className="text-sm font-semibold text-foreground md:text-base">{area.county}</p>
+                <p className="mt-1 text-sm leading-7 text-[var(--text-muted)]">{area.locations.join(", ")}</p>
               </div>
             ))}
           </div>

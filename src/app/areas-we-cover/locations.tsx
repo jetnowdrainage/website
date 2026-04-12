@@ -338,14 +338,14 @@ export function HomeLocations() {
             AREAS WE COVER
           </h2>
 
-          <p className="text-base leading-8 text-slate-700">
+          <p className="text-base leading-8 text-[var(--text-muted)]">
             Jet Now Drainage supports residential and commercial properties across key counties in
             and around London with fast response, planned maintenance and specialist drainage
             solutions.
           </p>
 
-          <div className="w-full max-w-[360px] rounded-xl border border-slate-200 bg-white p-3 shadow-[0_18px_32px_-26px_rgba(15,23,42,0.28)] lg:hidden">
-            <div className="aspect-square rounded-lg bg-[#eef2f8] p-2">
+          <div className="w-full max-w-[360px] rounded-xl border border-[var(--border)] bg-[var(--surface)] p-3 shadow-[0_18px_32px_-26px_rgba(15,23,42,0.28)] lg:hidden">
+            <div className="aspect-square rounded-lg bg-[var(--surface-muted)] p-2">
               <object
                 ref={mobileMapObjectRef}
                 type="image/svg+xml"
@@ -366,8 +366,8 @@ export function HomeLocations() {
                 onClick={() => setActiveAreaId(area.id)}
                 className={`flex items-center gap-2 rounded-md border px-3 py-2 text-left text-sm font-semibold transition ${
                   activeAreaId === area.id
-                    ? "border-emerald-500 bg-emerald-50 text-emerald-700"
-                    : "border-slate-200 bg-white text-slate-700 hover:border-brand-primary"
+                    ? "border-emerald-500 bg-emerald-50 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300"
+                    : "border-[var(--border)] bg-[var(--surface)] text-[var(--text-muted)] hover:border-brand-primary"
                 }`}
               >
                 <span className="text-emerald-500">✓</span>
@@ -376,8 +376,8 @@ export function HomeLocations() {
             ))}
           </div>
 
-          <p className="max-w-[58ch] text-base leading-8 text-slate-700">
-            <span className="font-semibold text-slate-900">{activeArea.county} coverage:</span>{" "}
+          <p className="max-w-[58ch] text-base leading-8 text-[var(--text-muted)]">
+            <span className="font-semibold text-foreground">{activeArea.county} coverage:</span>{" "}
             {activeArea.towns.join(", ")}
           </p>
 
@@ -389,8 +389,8 @@ export function HomeLocations() {
           </Link>
         </div>
 
-        <div className="hidden w-full max-w-[540px] justify-self-center rounded-xl border border-slate-200 bg-white p-3 shadow-[0_18px_32px_-26px_rgba(15,23,42,0.28)] lg:block lg:justify-self-end">
-          <div className="aspect-square rounded-lg bg-[#eef2f8] p-2">
+        <div className="hidden w-full max-w-[540px] justify-self-center rounded-xl border border-[var(--border)] bg-[var(--surface)] p-3 shadow-[0_18px_32px_-26px_rgba(15,23,42,0.28)] lg:block lg:justify-self-end">
+          <div className="aspect-square rounded-lg bg-[var(--surface-muted)] p-2">
             <object
               ref={desktopMapObjectRef}
               type="image/svg+xml"

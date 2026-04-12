@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { ThemeToggleButton } from "@/components/Theme/ThemeToggleButton";
 
 const navItems = [
   { label: "Services", href: "/services" },
@@ -46,35 +47,38 @@ export function MobileNavbar() {
           />
         </Link>
 
-        <button
-          type="button"
-          aria-label={isOpen ? "Close menu" : "Open menu"}
-          aria-expanded={isOpen}
-          aria-controls="mobile-nav-panel"
-          onClick={() => setIsOpen((prev) => !prev)}
-          className="inline-flex h-11 w-11 items-center justify-center rounded-md border border-white/20 text-slate-200 transition hover:border-brand-primary hover:text-brand-primary"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="h-5 w-5"
+        <div className="flex items-center gap-2">
+          <ThemeToggleButton />
+          <button
+            type="button"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isOpen}
+            aria-controls="mobile-nav-panel"
+            onClick={() => setIsOpen((prev) => !prev)}
+            className="inline-flex h-11 w-11 items-center justify-center rounded-md border border-white/20 text-slate-200 transition hover:border-brand-primary hover:text-brand-primary"
           >
-            {isOpen ? (
-              <path d="M18 6L6 18M6 6l12 12" />
-            ) : (
-              <>
-                <line x1="3" y1="6" x2="21" y2="6" />
-                <line x1="3" y1="12" x2="21" y2="12" />
-                <line x1="3" y1="18" x2="21" y2="18" />
-              </>
-            )}
-          </svg>
-        </button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="h-5 w-5"
+            >
+              {isOpen ? (
+                <path d="M18 6L6 18M6 6l12 12" />
+              ) : (
+                <>
+                  <line x1="3" y1="6" x2="21" y2="6" />
+                  <line x1="3" y1="12" x2="21" y2="12" />
+                  <line x1="3" y1="18" x2="21" y2="18" />
+                </>
+              )}
+            </svg>
+          </button>
+        </div>
       </div>
 
       {isOpen ? (

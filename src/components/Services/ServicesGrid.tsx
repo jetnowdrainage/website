@@ -59,7 +59,7 @@ export function ServicesGrid() {
           <h2 className="text-3xl font-bold uppercase tracking-tight text-brand-primary md:text-4xl">
             Our Drainage Services
           </h2>
-          <p className="max-w-3xl text-base leading-8 text-slate-700">
+          <p className="max-w-3xl text-base leading-8 text-[var(--text-muted)]">
             Tap or click a card to view a quick overview of each service. We can update imagery and
             copy in the next pass once final content is approved.
           </p>
@@ -74,7 +74,7 @@ export function ServicesGrid() {
                 key={service.id}
                 type="button"
                 onClick={() => toggleCard(service.id)}
-                className="group relative h-[260px] w-full overflow-hidden rounded-xl border border-slate-200 bg-white text-left shadow-[0_14px_30px_-24px_rgba(15,23,42,0.45)] transition hover:-translate-y-0.5"
+                className="group relative h-[260px] w-full overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--surface)] text-left shadow-[0_14px_30px_-24px_rgba(15,23,42,0.45)] transition hover:-translate-y-0.5"
                 aria-pressed={isActive}
               >
                 <div

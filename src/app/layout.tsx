@@ -5,6 +5,7 @@ import { MobileNavbar } from "@/components/Navigation/MobileNavbar/MobileNavbar"
 import { FloatingWhatsappButton } from "@/components/Contact/FloatingWhatsappButton";
 import { SiteFooter } from "@/components/Footer/SiteFooter";
 import { ComingSoonScreen } from "@/components/ComingSoon/ComingSoonScreen";
+import { ThemeProvider } from "@/components/Theme/ThemeProvider";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -39,19 +40,22 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col bg-white text-slate-900">
-        {isComingSoon ? (
-          <ComingSoonScreen />
-        ) : (
-          <>
-            <MobileNavbar />
-            <DesktopNavbar />
-            <main className="flex-1">{children}</main>
-            <FloatingWhatsappButton />
-            <SiteFooter />
-          </>
-        )}
+      <body className="min-h-full flex flex-col bg-background text-foreground transition-colors duration-300">
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+          {isComingSoon ? (
+            <ComingSoonScreen />
+          ) : (
+            <>
+              <MobileNavbar />
+              <DesktopNavbar />
+              <main className="flex-1">{children}</main>
+              <FloatingWhatsappButton />
+              <SiteFooter />
+            </>
+          )}
+        </ThemeProvider>
       </body>
     </html>
   );

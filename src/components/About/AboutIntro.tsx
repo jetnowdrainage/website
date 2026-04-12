@@ -27,19 +27,19 @@ export function AboutIntro() {
             Local Drainage Experts
           </h2>
 
-          <p className="text-base leading-8 text-slate-700">
+          <p className="text-base leading-8 text-[var(--text-muted)]">
             Jet Now Drainage is an independent, family-run business delivering dependable drainage
             services for homes, landlords, and businesses. Our team focuses on practical solutions,
             clear communication, and high standards on every job.
           </p>
 
-          <p className="text-base leading-8 text-slate-700">
+          <p className="text-base leading-8 text-[var(--text-muted)]">
             Covering London and the South East, we provide responsive support for both urgent
             call-outs and planned maintenance work, helping clients keep drainage systems safe,
             compliant, and running smoothly.
           </p>
 
-          <ul className="grid gap-3 text-base font-medium text-slate-700 sm:grid-cols-2">
+          <ul className="grid gap-3 text-base font-medium text-[var(--text-muted)] sm:grid-cols-2">
             {aboutHighlights.map((item) => (
               <li key={item} className="flex items-center gap-3">
                 <span className="h-2.5 w-2.5 rounded-full bg-brand-primary" aria-hidden />
