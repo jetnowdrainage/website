@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 
 type ThemeToggleButtonProps = {
@@ -8,13 +9,22 @@ type ThemeToggleButtonProps = {
 
 export function ThemeToggleButton({ className = "" }: ThemeToggleButtonProps) {
   const { resolvedTheme, setTheme } = useTheme();
-  const isDark = resolvedTheme === "dark";
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const isDark = mounted && resolvedTheme === "dark";
 
   return (
     <button
       type="button"
-      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-      onClick={() => setTheme(isDark ? "light" : "dark")}
+      aria-label={mounted ? (isDark ? "Switch to light mode" : "Switch to dark mode") : "Toggle theme"}
+      onClick={() => {
+        if (!mounted) return;
+        setTheme(isDark ? "light" : "dark");
+      }}
       className={`inline-flex h-11 w-11 items-center justify-center rounded-md border border-white/20 text-slate-200 transition hover:border-brand-primary hover:text-brand-primary ${className}`}
     >
       {isDark ? (
