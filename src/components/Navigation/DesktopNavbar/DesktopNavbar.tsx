@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ThemeToggleButton } from "@/components/Theme/ThemeToggleButton";
 
 const navItems = [
   { label: "Services", href: "/services" },
@@ -23,7 +24,7 @@ export function DesktopNavbar() {
           />
         </Link>
 
-        <nav aria-label="Primary navigation" className="hidden items-center gap-8 lg:flex">
+        <nav aria-label="Primary navigation" className="hidden items-center gap-5 lg:flex">
           {navItems.map((item) => (
             <Link
               key={item.label}
@@ -33,6 +34,7 @@ export function DesktopNavbar() {
               {item.label}
             </Link>
           ))}
+          <ThemeToggleButton />
         </nav>
       </div>
     </header>

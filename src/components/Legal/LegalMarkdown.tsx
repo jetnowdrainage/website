@@ -20,7 +20,7 @@ export function LegalMarkdown({ markdown }: LegalMarkdownProps) {
 
     if (line.startsWith("### ")) {
       blocks.push(
-        <h3 key={`h3-${key++}`} className="text-lg font-semibold text-slate-900">
+        <h3 key={`h3-${key++}`} className="text-lg font-semibold text-foreground">
           {line.slice(4)}
         </h3>,
       );
@@ -46,7 +46,7 @@ export function LegalMarkdown({ markdown }: LegalMarkdownProps) {
       }
 
       blocks.push(
-        <ul key={`ul-${key++}`} className="list-disc space-y-2 pl-5 text-slate-700">
+        <ul key={`ul-${key++}`} className="list-disc space-y-2 pl-5 text-[var(--text-muted)]">
           {listItems.map((item) => (
             <li key={`li-${key++}`}>{item}</li>
           ))}
@@ -67,7 +67,7 @@ export function LegalMarkdown({ markdown }: LegalMarkdownProps) {
 
     if (paragraphLines.length > 0) {
       blocks.push(
-        <p key={`p-${key++}`} className="leading-8 text-slate-700">
+        <p key={`p-${key++}`} className="leading-8 text-[var(--text-muted)]">
           {paragraphLines.join(" ")}
         </p>,
       );

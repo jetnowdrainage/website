@@ -22,8 +22,8 @@ export function LegalContent() {
               onClick={() => setActivePolicyId(policy.id)}
               className={`rounded-md border px-4 py-2 text-sm font-semibold transition ${
                 activePolicy.id === policy.id
-                  ? "border-brand-primary bg-[#e8f2f9] text-brand-primary"
-                  : "border-slate-200 bg-white text-slate-700 hover:border-brand-primary"
+                  ? "border-brand-primary bg-[#e8f2f9] text-brand-primary dark:bg-[#172535]"
+                  : "border-[var(--border)] bg-[var(--surface)] text-[var(--text-muted)] hover:border-brand-primary"
               }`}
             >
               {policy.title}
@@ -33,11 +33,11 @@ export function LegalContent() {
 
         <article
           id={activePolicy.id}
-          className="space-y-5 rounded-xl border border-slate-200 bg-white p-6 shadow-[0_18px_32px_-26px_rgba(15,23,42,0.28)] md:p-8"
+          className="space-y-5 rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6 shadow-[0_18px_32px_-26px_rgba(15,23,42,0.28)] md:p-8"
         >
           <div className="space-y-2">
-            <h2 className="text-2xl font-bold tracking-tight text-slate-900">{activePolicy.title}</h2>
-            <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+            <h2 className="text-2xl font-bold tracking-tight text-foreground">{activePolicy.title}</h2>
+            <p className="text-xs font-semibold uppercase tracking-wide text-[var(--text-muted)]">
               Last updated: {activePolicy.lastUpdated}
             </p>
           </div>
