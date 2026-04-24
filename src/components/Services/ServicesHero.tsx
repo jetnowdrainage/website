@@ -1,11 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+import { MapPin, Phone } from "lucide-react";
+
+const heroButtonBaseClass =
+  "inline-flex items-center gap-2 border-2 border-white px-8 py-3 text-sm font-bold uppercase tracking-wide text-white transition duration-200";
 
 export function ServicesHero() {
   return (
     <section className="relative isolate min-h-[46vh] overflow-hidden md:min-h-[50vh]">
       <Image
-        src="/JetNow/HomeHero.jpg"
+        src="/JetNow/NewImages/JN-HomeHero.jpg"
         alt="Jet Now Drainage engineer delivering drainage services"
         fill
         priority
@@ -33,15 +37,17 @@ export function ServicesHero() {
           <div className="flex flex-wrap gap-3 pt-2">
             <Link
               href="/contact-us"
-              className="inline-flex border-2 border-white bg-[#ea591b] px-8 py-3 text-sm font-bold uppercase tracking-wide text-white transition duration-200 hover:border-[#ea591b] hover:bg-white hover:text-[#ea591b]"
+              className={`${heroButtonBaseClass} bg-[#ea591b] hover:border-[#ea591b] hover:bg-white hover:text-[#ea591b]`}
             >
-              Contact Us
+              <Phone aria-hidden="true" className="h-4 w-4" strokeWidth={2} />
+              <span>Contact Us</span>
             </Link>
             <Link
               href="/areas-we-cover"
-              className="inline-flex border-2 border-white bg-emerald-500 px-8 py-3 text-sm font-bold uppercase tracking-wide text-white transition duration-200 hover:border-emerald-500 hover:bg-white hover:text-emerald-500"
+              className={`${heroButtonBaseClass} bg-emerald-500 hover:border-emerald-500 hover:bg-white hover:text-emerald-500`}
             >
-              Areas Covered
+              <MapPin aria-hidden="true" className="h-4 w-4" strokeWidth={2} />
+              <span>Areas Covered</span>
             </Link>
           </div>
         </div>

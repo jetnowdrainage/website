@@ -1,14 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+import { MapPin, Wrench } from "lucide-react";
 
 const heroButtonBaseClass =
-  "inline-flex border-2 border-white px-8 py-3 text-sm font-bold uppercase tracking-wide text-white transition duration-200";
+  "inline-flex items-center gap-2 border-2 border-white px-8 py-3 text-sm font-bold uppercase tracking-wide text-white transition duration-200";
 
 export function ContactHero() {
   return (
     <section className="relative isolate min-h-[46vh] overflow-hidden md:min-h-[50vh]">
       <Image
-        src="/JetNow/HomeHero.jpg"
+        src="/JetNow/NewImages/JN-HomeHero.jpg"
         alt="Jet Now Drainage team ready to help with contact enquiries"
         fill
         priority
@@ -38,13 +39,15 @@ export function ContactHero() {
               href="/services"
               className={`${heroButtonBaseClass} bg-[#ea591b] hover:border-[#ea591b] hover:bg-white hover:text-[#ea591b]`}
             >
-              View Services
+              <Wrench aria-hidden="true" className="h-4 w-4" strokeWidth={2} />
+              <span>View Services</span>
             </Link>
             <Link
               href="/areas-we-cover"
               className={`${heroButtonBaseClass} bg-emerald-500 hover:border-emerald-500 hover:bg-white hover:text-emerald-500`}
             >
-              Areas Covered
+              <MapPin aria-hidden="true" className="h-4 w-4" strokeWidth={2} />
+              <span>Areas Covered</span>
             </Link>
           </div>
         </div>
