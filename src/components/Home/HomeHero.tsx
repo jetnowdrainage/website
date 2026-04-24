@@ -1,20 +1,23 @@
 import Link from "next/link";
-import Image from "next/image";
+import { Phone, Wrench } from "lucide-react";
 
 const heroButtonBaseClass =
-  "inline-flex border-2 border-white px-8 py-3 text-sm font-bold uppercase tracking-wide text-white transition duration-200";
+  "inline-flex items-center gap-2 border-2 border-white px-8 py-3 text-sm font-bold uppercase tracking-wide text-white transition duration-200";
 
 export function HomeHero() {
   return (
     <section className="relative isolate min-h-[62vh] overflow-hidden md:min-h-[66vh]">
-      <Image
-        src="/JetNow/HomeHero.jpg"
-        alt="Jet Now Drainage van with specialist drainage equipment"
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover object-center"
-      />
+      <video
+        className="absolute inset-0 h-full w-full object-cover object-center"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        aria-hidden="true"
+      >
+        <source src="/JetNow/NewImages/JN-HomeHeroVideo.mp4" type="video/mp4" />
+      </video>
 
       <div className="absolute inset-0 bg-slate-950/35" />
 
@@ -38,13 +41,15 @@ export function HomeHero() {
               href="/contact-us"
               className={`${heroButtonBaseClass} bg-[#ea591b] hover:border-[#ea591b] hover:bg-white hover:text-[#ea591b]`}
             >
-              Contact Us
+              <Phone aria-hidden="true" className="h-4 w-4" strokeWidth={2} />
+              <span>Contact Us</span>
             </Link>
             <Link
               href="/services"
               className={`${heroButtonBaseClass} bg-emerald-500 hover:border-emerald-500 hover:bg-white hover:text-emerald-500`}
             >
-              View Services
+              <Wrench aria-hidden="true" className="h-4 w-4" strokeWidth={2} />
+              <span>View Services</span>
             </Link>
           </div>
         </div>

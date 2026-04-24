@@ -7,38 +7,61 @@ type ServiceCard = {
   id: string;
   title: string;
   description: string;
+  imageSrc: string;
 };
 
 const services: ServiceCard[] = [
   {
-    id: "drain-unblocking",
-    title: "Internal & External Unblocks",
-    description: "From blocked baths and toilets to blocked main sewers, we are fully equipped to handle any blockage.",
+    id: "internal-unblocks",
+    title: "Internal Unblocks",
+    description:
+      "Fast clearance for blocked toilets, sinks, baths and internal waste pipework with clean, careful working practices.",
+    imageSrc: "/JetNow/NewImages/JN-InternalUnblocks.jpg",
+  },
+  {
+    id: "external-unblocks",
+    title: "External Unblocks",
+    description:
+      "We clear blocked gullies, outside drains and shared runs to restore flow and reduce repeat issues.",
+    imageSrc: "/JetNow/NewImages/JN-ExternalUnblocks.jpg",
+  },
+  {
+    id: "tanker-unblocks",
+    title: "Tanker Unblocks",
+    description:
+      "For heavy-duty jobs, our tanker support removes high volumes of waste and keeps commercial and large sites moving.",
+    imageSrc: "/JetNow/NewImages/JN-TankerUnblocks.jpeg",
   },
   {
     id: "cctv-surveys",
     title: "CCTV Drain Surveys",
-    description: "Our skilled technicians use the latest technology to scan your system in order to confirm its condition.",
+    description:
+      "Our engineers use CCTV drain cameras to inspect pipework and provide clear findings on condition and fault locations.",
+    imageSrc: "/JetNow/NewImages/JN-CCTVDrainSurveys.jpg",
   },
   {
     id: "jetting",
     title: "High-Pressure Jetting",
     description: "Powerful water jetting to remove build-up, grease and debris from drainage pipework.",
+    imageSrc: "/JetNow/HomeDrainServices.jpg",
   },
   {
     id: "repairs",
     title: "Drain Repairs and Relining",
     description: "Targeted repair and relining options designed to extend system life with less disruption.",
+    imageSrc: "/JetNow/HomeDrainServices.jpg",
   },
   {
     id: "emergency",
     title: "24/7 Emergency Response",
     description: "We aim to be on site within 1-2 hours to prevent disruption to your home or business.",
+    imageSrc: "/JetNow/HomeDrainServices.jpg",
   },
   {
     id: "drain-cleaning",
     title: "Drain Descaling",
     description: "Descaling and maintaining your drainage system expands the lifespan and decreases the likelihood of blockages. We offer warranty on all descaling works.",
+    imageSrc: "/JetNow/HomeDrainServices.jpg",
   },
 ];
 
@@ -84,7 +107,7 @@ export function ServicesGrid() {
                 >
                   <div className="absolute inset-0 [backface-visibility:hidden]">
                     <Image
-                      src="/JetNow/HomeDrainServices.jpg"
+                      src={service.imageSrc}
                       alt={service.title}
                       fill
                       sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
