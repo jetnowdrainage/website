@@ -16,7 +16,7 @@ export function HomeHero() {
         preload="metadata"
         aria-hidden="true"
       >
-        <source src="/JetNow/NewImages/JN-HomeHeroVideo.mp4" type="video/mp4" />
+        <source src="/JetNow/NewImages/jetnowtrimmed.mp4" type="video/mp4" />
       </video>
 
       <div className="absolute inset-0 bg-slate-950/35" />

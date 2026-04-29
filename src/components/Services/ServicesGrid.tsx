@@ -8,6 +8,7 @@ type ServiceCard = {
   title: string;
   description: string;
   imageSrc: string;
+  imageClassName?: string;
 };
 
 const services: ServiceCard[] = [
@@ -26,10 +27,10 @@ const services: ServiceCard[] = [
     imageSrc: "/JetNow/NewImages/JN-ExternalUnblocks.jpg",
   },
   {
-    id: "tanker-unblocks",
-    title: "Tanker Unblocks",
+    id: "tanker-services",
+    title: "Tanker Services",
     description:
-      "For heavy-duty jobs, our tanker support removes high volumes of waste and keeps commercial and large sites moving.",
+      "For heavy-duty jobs, our tanker support removes high volumes of waste to keep domestic and commercial clients free-flowing.",
     imageSrc: "/JetNow/NewImages/JN-TankerUnblocks.jpeg",
   },
   {
@@ -43,7 +44,7 @@ const services: ServiceCard[] = [
     id: "jetting",
     title: "High-Pressure Jetting",
     description: "Powerful water jetting to remove build-up, grease and debris from drainage pipework.",
-    imageSrc: "/JetNow/HomeDrainServices.jpg",
+    imageSrc: "/JetNow/NewImages/highpressurejetting.jpeg",
   },
   {
     id: "repairs",
@@ -61,7 +62,7 @@ const services: ServiceCard[] = [
     id: "drain-cleaning",
     title: "Drain Descaling",
     description: "Descaling and maintaining your drainage system expands the lifespan and decreases the likelihood of blockages. We offer warranty on all descaling works.",
-    imageSrc: "/JetNow/HomeDrainServices.jpg",
+    imageSrc: "/JetNow/NewImages/draindescaling.jpeg",
   },
 ];
 
@@ -69,7 +70,8 @@ export function ServicesGrid() {
   const [activeCardId, setActiveCardId] = useState<string | null>(null);
 
   const toggleCard = (cardId: string) => {
-    if (window.matchMedia("(min-width: 768px)").matches) {
+    const supportsHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    if (supportsHover) {
       return;
     }
     setActiveCardId((currentId) => (currentId === cardId ? null : cardId));
@@ -97,21 +99,21 @@ export function ServicesGrid() {
                 key={service.id}
                 type="button"
                 onClick={() => toggleCard(service.id)}
-                className="group relative h-[260px] w-full overflow-hidden rounded-xl bg-[var(--surface)] text-left shadow-[0_14px_30px_-24px_rgba(15,23,42,0.45)] transition hover:-translate-y-0.5"
+                className="group relative h-[260px] w-full overflow-hidden rounded-xl bg-[var(--surface)] text-left shadow-[0_14px_30px_-24px_rgba(15,23,42,0.45)] transition hover:-translate-y-0.5 [perspective:1000px]"
                 aria-pressed={isActive}
               >
                 <div
-                  className={`relative h-full w-full transition-transform duration-500 [transform-style:preserve-3d] md:group-hover:[transform:rotateY(180deg)] ${
-                    isActive ? "[transform:rotateY(180deg)]" : ""
+                  className={`relative h-full w-full transition-transform duration-500 [transform-style:preserve-3d] [-webkit-transform-style:preserve-3d] md:group-hover:[transform:rotateY(180deg)] md:group-hover:[-webkit-transform:rotateY(180deg)] ${
+                    isActive ? "[transform:rotateY(180deg)] [-webkit-transform:rotateY(180deg)]" : ""
                   }`}
                 >
-                  <div className="absolute inset-0 [backface-visibility:hidden]">
+                  <div className="absolute inset-0 [backface-visibility:hidden] [-webkit-backface-visibility:hidden]">
                     <Image
                       src={service.imageSrc}
                       alt={service.title}
                       fill
                       sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                      className="object-cover"
+                      className={service.imageClassName ?? "object-cover"}
                     />
                     <div className="absolute inset-0 bg-slate-950/40" />
                     <div className="absolute inset-x-0 bottom-0 p-4">
@@ -125,10 +127,20 @@ export function ServicesGrid() {
                     </div>
                   </div>
 
-                  <div className="absolute inset-0 flex [backface-visibility:hidden] [transform:rotateY(180deg)] items-end bg-brand-primary p-5">
-                    <div className="space-y-3">
-                      <p className="text-lg font-bold text-white">{service.title}</p>
-                      <p className="min-h-[72px] text-sm leading-6 text-slate-200">{service.description}</p>
+                  <div className="absolute inset-0 [backface-visibility:hidden] [-webkit-backface-visibility:hidden] [transform:rotateY(180deg)] [-webkit-transform:rotateY(180deg)]">
+                    <Image
+                      src={service.imageSrc}
+                      alt={service.title}
+                      fill
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                      className={service.imageClassName ?? "object-cover"}
+                    />
+                    <div className="absolute inset-0 bg-brand-primary/95" />
+                    <div className="absolute inset-0 flex items-end p-5">
+                      <div className="space-y-3">
+                        <p className="text-lg font-bold text-white">{service.title}</p>
+                        <p className="min-h-[72px] text-sm leading-6 text-slate-200">{service.description}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
