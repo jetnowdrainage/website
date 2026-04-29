@@ -22,17 +22,11 @@ export function HomeDrainServices() {
             sizes="(min-width: 1024px) 50vw, 100vw"
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-slate-950/20 lg:hidden" />
-          <div className="absolute inset-0 flex items-center justify-center px-4 lg:hidden">
-            <h2 className="text-center text-4xl font-bold uppercase tracking-tight text-brand-primary">
-              Drainage Services
-            </h2>
-          </div>
         </div>
 
         <div className="order-2 space-y-6 lg:order-2">
-          <h2 className="hidden text-3xl font-bold uppercase tracking-tight text-brand-primary md:text-4xl lg:block">
-            Drain Services Near You
+          <h2 className="text-3xl font-bold uppercase tracking-tight text-brand-primary md:text-4xl">
+            Complete Drainage Solutions
           </h2>
 
           <p className="text-base leading-8 text-[var(--text-muted)]">
