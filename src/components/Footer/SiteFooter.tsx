@@ -10,7 +10,7 @@ const socialLinks = [
   },
   {
     label: "Instagram",
-    href: "https://www.instagram.com/jetnowdrainage",
+    href: "https://www.instagram.com/jetnow_drainage/",
     iconSrc: "/icons/Instagram_logo_2022.svg",
     iconAlt: "Instagram",
   },
