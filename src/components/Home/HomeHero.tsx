@@ -16,7 +16,7 @@ export function HomeHero() {
         preload="metadata"
         aria-hidden="true"
       >
-        <source src="/JetNow/NewImages/jetnowtrimmed.mp4" type="video/mp4" />
+        <source src="/JetNow/NewImages/JNTRIMMED2.mp4" type="video/mp4" />
       </video>
 
       <div className="absolute inset-0 bg-slate-950/35" />
@@ -31,9 +31,10 @@ export function HomeHero() {
             Fast, professional drainage support when you need it most.
           </h1>
 
-          <p className="max-w-xl text-base leading-relaxed text-slate-100 md:text-lg">
-            Jet Now Drainage delivers reliable unblocking, jetting and drainage services for
-            homes and businesses across the UK.
+          <p className="max-w-[41rem] text-base leading-relaxed text-slate-100 md:text-lg">
+            JetNow Drainage delivers reliable, fixed-price drainage solutions for homes and
+            businesses across the UK. Backed by over 10 years of hands-on experience, we resolve
+            issues quickly, cleanly, and with minimal disruption
           </p>
 
           <div className="flex flex-wrap gap-4 pt-2">

@@ -50,19 +50,19 @@ const services: ServiceCard[] = [
     id: "repairs",
     title: "Drain Repairs and Relining",
     description: "Targeted repair and relining options designed to extend system life with less disruption.",
-    imageSrc: "/JetNow/HomeDrainServices.jpg",
+    imageSrc: "/JetNow/JN%20-%20Repairs%20Relining.jpeg",
   },
   {
     id: "emergency",
     title: "24/7 Emergency Response",
     description: "We aim to be on site within 1-2 hours to prevent disruption to your home or business.",
-    imageSrc: "/JetNow/HomeDrainServices.jpg",
+    imageSrc: "/JetNow/NewImages/draindescaling.jpeg",
   },
   {
     id: "drain-cleaning",
     title: "Drain Descaling",
     description: "Descaling and maintaining your drainage system expands the lifespan and decreases the likelihood of blockages. We offer warranty on all descaling works.",
-    imageSrc: "/JetNow/NewImages/draindescaling.jpeg",
+    imageSrc: "/JetNow/JN%20-%20DrainDescaling2.jpeg",
   },
 ];
 

@@ -19,7 +19,7 @@ export function HomeCta() {
               </h2>
 
               <p className="max-w-xl text-sm leading-7 text-sky-100 sm:max-w-2xl sm:text-base sm:leading-8 md:text-lg">
-                Jet Now Drainage, a small family-operated business with customer service and
+                JetNow Drainage, a small family-operated business with customer service and
                 reputation at the heart of everything we do. We approach every job and customer
                 with the same level of passion and professionalism.
               </p>
@@ -27,7 +27,7 @@ export function HomeCta() {
               <div className="relative h-[190px] sm:h-[240px] md:hidden">
                 <Image
                   src="/JetNow/JetNow%20Van%20Render.png"
-                  alt="Jet Now Drainage branded service van"
+                  alt="JetNow Drainage branded service van"
                   fill
                   sizes="100vw"
                   className="object-contain object-right"
@@ -57,7 +57,7 @@ export function HomeCta() {
             <div className="relative hidden h-[360px] md:block">
               <Image
                 src="/JetNow/JetNow%20Van%20Render.png"
-                alt="Jet Now Drainage branded service van"
+                alt="JetNow Drainage branded service van"
                 fill
                 sizes="(min-width: 1024px) 40vw, 90vw"
                 className="object-contain object-right drop-shadow-2xl lg:scale-110"
