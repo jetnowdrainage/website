@@ -16,7 +16,7 @@ export function HomeDrainServices() {
       <div className="mx-auto grid w-full max-w-7xl gap-10 px-6 lg:grid-cols-2 lg:items-center">
         <div className="order-1 relative h-[320px] overflow-hidden rounded-sm md:h-[460px] lg:order-1">
           <Image
-            src="/JetNow/HomeDrainServices.jpg"
+            src="/JetNow/JN%20-%20HomeServicesImg.jpeg"
             alt="Drain engineer carrying out specialist drain servicing"
             fill
             sizes="(min-width: 1024px) 50vw, 100vw"
@@ -30,7 +30,7 @@ export function HomeDrainServices() {
           </h2>
 
           <p className="text-base leading-8 text-[var(--text-muted)]">
-            Experiencing a blocked drain or a more complex drainage issue? Jet Now Drainage
+            Experiencing a blocked drain or a more complex drainage issue? JetNow Drainage
             provides comprehensive drainage services designed to tackle problems quickly and
             professionally, helping your system run smoothly.
           </p>

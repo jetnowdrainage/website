@@ -6,10 +6,10 @@ const stats = [
     mobileLabel: "Professional experience",
   },
   {
-    value: "Quality assured",
-    label: "Trusted workmanship",
-    mobileValue: "Quality",
-    mobileLabel: "Trusted workmanship",
+    value: "Fixed pricing",
+    label: "Clear upfront costs",
+    mobileValue: "Fixed pricing",
+    mobileLabel: "Clear upfront costs",
   },
   {
     value: "2-hour response",

@@ -387,7 +387,7 @@ export function HomeLocations() {
           </h2>
 
           <p className="text-base leading-8 text-[var(--text-muted)]">
-            Jet Now Drainage supports residential and commercial properties across key counties in
+            JetNow Drainage supports residential and commercial properties across key counties in
             and around London with fast response, planned maintenance and specialist drainage
             solutions.
           </p>
