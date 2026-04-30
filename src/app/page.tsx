@@ -2,6 +2,7 @@ import { HomeHero } from "@/components/Home/HomeHero";
 import { HomeStatsStrip } from "@/components/Home/HomeStatsStrip";
 import { HomeDrainServices } from "@/components/Home/HomeDrainServices";
 import { HomeLocations } from "@/components/Home/HomeLocations";
+import { HomeTestimonials } from "@/components/Home/HomeTestimonials";
 import { HomeCta } from "@/components/Home/HomeCta";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <HomeStatsStrip />
       <HomeDrainServices />
       <HomeLocations />
+      <HomeTestimonials />
       <HomeCta />
     </>
   );
