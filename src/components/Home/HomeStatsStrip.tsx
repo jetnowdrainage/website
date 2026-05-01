@@ -9,7 +9,7 @@ const stats = [
     value: "Fixed pricing",
     label: "Clear upfront costs",
     mobileValue: "Fixed pricing",
-    mobileLabel: "Clear upfront costs",
+    mobileLabel: "Clear upfront\ncosts",
   },
   {
     value: "2-hour response",
@@ -36,7 +36,7 @@ export function HomeStatsStrip() {
                 <span className="hidden sm:inline">{stat.value}</span>
               </p>
               <p className="text-[11px] font-medium leading-tight text-slate-100 sm:text-xs md:text-sm">
-                <span className="sm:hidden">{stat.mobileLabel}</span>
+                <span className="whitespace-pre-line sm:hidden">{stat.mobileLabel}</span>
                 <span className="hidden sm:inline">{stat.label}</span>
               </p>
             </div>

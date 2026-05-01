@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Phone } from "lucide-react";
 import { ThemeToggleButton } from "@/components/Theme/ThemeToggleButton";
 
 const navItems = [
@@ -40,8 +41,8 @@ export function MobileNavbar() {
           <Image
             src="/JetNow/JetNowLogoCroppedNoBG.png"
             alt="Jet Now Drainage"
-            width={150}
-            height={60}
+            width={146}
+            height={58}
             priority
             className="h-auto w-auto"
           />
@@ -105,11 +106,12 @@ export function MobileNavbar() {
                 </Link>
               ))}
               <a
-                href="tel:07804450233"
+                href="tel:+447804450233"
                 onClick={() => setIsOpen(false)}
                 className="mt-2 inline-flex items-center justify-center rounded-md bg-brand-primary px-4 py-3 text-sm font-semibold text-white transition hover:opacity-90"
               >
-                Call 07804 450 233
+                <Phone aria-hidden="true" className="mr-2 h-4 w-4" strokeWidth={2} />
+                <span>Call 07804 450 233</span>
               </a>
             </nav>
           </div>
