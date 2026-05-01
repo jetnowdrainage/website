@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { AreasHero } from "@/components/Areas/AreasHero";
 import { AreasSeo } from "@/components/Areas/AreasSeo";
 import { HomeLocations } from "@/components/Areas/Locations";
@@ -7,7 +8,9 @@ export default function AreasWeCoverPage() {
     <>
       <AreasHero />
       <HomeLocations />
-      <AreasSeo />
+      <Suspense fallback={null}>
+        <AreasSeo />
+      </Suspense>
     </>
   );
 }

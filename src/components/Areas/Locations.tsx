@@ -1,8 +1,12 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { MapPin } from "lucide-react";
+
+const AUTO_ROTATE_INTERVAL_MS = 3000;
+const RESUME_AFTER_INTERACTION_MS = 2000;
 
 type CoverageArea = {
   id: string;
@@ -153,6 +157,92 @@ export function HomeLocations() {
   });
   const desktopMapObjectRef = useRef<HTMLObjectElement | null>(null);
   const mobileMapObjectRef = useRef<HTMLObjectElement | null>(null);
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isRotationPaused, setIsRotationPaused] = useState(false);
+  const resumeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const markInteraction = useCallback(() => {
+    setIsRotationPaused(true);
+    if (resumeTimeoutRef.current) {
+      clearTimeout(resumeTimeoutRef.current);
+    }
+    resumeTimeoutRef.current = setTimeout(() => {
+      setIsRotationPaused(false);
+      resumeTimeoutRef.current = null;
+    }, RESUME_AFTER_INTERACTION_MS);
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      if (resumeTimeoutRef.current) {
+        clearTimeout(resumeTimeoutRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isRotationPaused) return;
+
+    const intervalId = window.setInterval(() => {
+      setActiveAreaId((current) => {
+        const currentIndex = coverageAreas.findIndex((area) => area.id === current);
+        const nextIndex = (currentIndex + 1) % coverageAreas.length;
+        return coverageAreas[nextIndex].id;
+      });
+    }, AUTO_ROTATE_INTERVAL_MS);
+
+    return () => window.clearInterval(intervalId);
+  }, [isRotationPaused]);
+
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        setIsRotationPaused(true);
+      } else if (!resumeTimeoutRef.current) {
+        setIsRotationPaused(false);
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    return () => document.removeEventListener("visibilitychange", handleVisibilityChange);
+  }, []);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 1023px)");
+    const updateIsMobile = () => setIsMobile(mediaQuery.matches);
+    updateIsMobile();
+    mediaQuery.addEventListener("change", updateIsMobile);
+    return () => mediaQuery.removeEventListener("change", updateIsMobile);
+  }, []);
+
+  useEffect(() => {
+    const node = sectionRef.current;
+    if (!node) return;
+
+    if (typeof IntersectionObserver === "undefined") {
+      setIsVisible(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.2, rootMargin: "0px 0px -10% 0px" },
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
   const svgIdToAreaId = useMemo(() => {
     const map = new Map<string, string>();
 
@@ -327,7 +417,10 @@ export function HomeLocations() {
         const areaId = svgIdToAreaId.get(el.id);
         if (!areaId) return;
 
-        const handleActivate = () => setActiveAreaId(areaId);
+        const handleActivate = () => {
+          setActiveAreaId(areaId);
+          markInteraction();
+        };
         el.style.cursor = "pointer";
         el.addEventListener("mouseenter", handleActivate);
         el.addEventListener("click", handleActivate);
@@ -375,12 +468,16 @@ export function HomeLocations() {
       loadCleanups.forEach((cleanup) => cleanup());
       eventCleanups.forEach((cleanup) => cleanup());
     };
-  }, [activeArea, pathname, svgIdToAreaId]);
+  }, [activeArea, pathname, svgIdToAreaId, markInteraction]);
+
+  const visibleClass = isVisible ? "is-visible" : "";
+  const textRevealClass = isMobile ? "reveal-fade-up" : "reveal-slide-left";
+  const mapRevealClass = isMobile ? "reveal-fade-up" : "reveal-slide-right";
 
   return (
-    <section className="pt-16 pb-16 md:pt-24 md:pb-24">
+    <section ref={sectionRef} className="pt-16 pb-16 md:pt-24 md:pb-24">
       <div className="mx-auto grid w-full max-w-7xl gap-6 px-6 lg:grid-cols-[1fr_1fr] lg:items-center lg:gap-10">
-        <div className="space-y-6">
+        <div className={`space-y-6 ${textRevealClass} ${visibleClass}`}>
           <h2 className="text-3xl font-bold uppercase tracking-tight text-brand-primary md:text-4xl">
             AREAS WE COVER
           </h2>
@@ -416,9 +513,18 @@ export function HomeLocations() {
               <button
                 key={area.id}
                 type="button"
-                onMouseEnter={() => setActiveAreaId(area.id)}
-                onFocus={() => setActiveAreaId(area.id)}
-                onClick={() => setActiveAreaId(area.id)}
+                onMouseEnter={() => {
+                  setActiveAreaId(area.id);
+                  markInteraction();
+                }}
+                onFocus={() => {
+                  setActiveAreaId(area.id);
+                  markInteraction();
+                }}
+                onClick={() => {
+                  setActiveAreaId(area.id);
+                  markInteraction();
+                }}
                 className={`flex items-center gap-2 rounded-md border px-3 py-2 text-left text-sm font-semibold transition ${
                   activeAreaId === area.id
                     ? "border-emerald-500 bg-emerald-500 text-slate-950 shadow-[inset_0_1px_0_rgba(255,255,255,0.22)] dark:border-emerald-500 dark:bg-emerald-500 dark:text-slate-950"
@@ -446,13 +552,19 @@ export function HomeLocations() {
 
           <Link
             href="#full-locations"
-            className="btn-outline-brand inline-flex px-8 py-3 text-sm font-bold uppercase tracking-wide transition"
+            onClick={() => {
+              window.dispatchEvent(new CustomEvent("expand-all-areas-locations"));
+            }}
+            className="btn-outline-brand inline-flex items-center gap-2 px-8 py-3 text-sm font-bold uppercase tracking-wide transition"
           >
-            Explore full locations and services
+            <MapPin aria-hidden="true" className="h-4 w-4" strokeWidth={2} />
+            <span>Explore full locations and services</span>
           </Link>
         </div>
 
-        <div className="hidden w-full max-w-[540px] justify-self-center rounded-xl border border-[var(--border)] bg-[var(--surface)] p-3 shadow-[0_18px_32px_-26px_rgba(15,23,42,0.28)] lg:block lg:justify-self-end">
+        <div
+          className={`hidden w-full max-w-[540px] justify-self-center rounded-xl border border-[var(--border)] bg-[var(--surface)] p-3 shadow-[0_18px_32px_-26px_rgba(15,23,42,0.28)] lg:block lg:justify-self-end ${mapRevealClass} ${visibleClass}`}
+        >
           <div className="relative aspect-square rounded-lg bg-[var(--surface-muted)] p-2">
             <object
               ref={desktopMapObjectRef}

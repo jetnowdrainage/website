@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 type Testimonial = {
@@ -14,28 +14,28 @@ const testimonials: Testimonial[] = [
   {
     title: "Fast and professional",
     quote:
-      "Called JetNow Drainage for an emergency blocked outside drain in Chelmsford. The engineer arrived quickly, explained the issue clearly, and left everything clean and tidy.",
+      "Called JetNow Drainage for an emergency blocked outside drain. The engineer arrived quickly, explained the issue clearly, and left everything clean and tidy.",
     author: "Sarah Whitmore",
     area: "Chelmsford, Essex",
   },
   {
     title: "Clear pricing and no surprises",
     quote:
-      "Excellent service from first call to completion in Guildford. The fixed pricing was clear up front, the team was polite, and the blockage was resolved without any fuss.",
+      "Excellent service from first call to completion. The fixed pricing was clear up front, the team was polite, and the blockage was resolved without any fuss.",
     author: "Daniel Harper",
     area: "Guildford, Surrey",
   },
   {
     title: "Helpful CCTV report",
     quote:
-      "We needed a CCTV drain survey for a managed property in Watford. JetNow provided a detailed report with practical recommendations and talked us through the next steps.",
+      "We needed a CCTV drain survey for a managed property. JetNow provided a detailed report and talked us through the next steps.",
     author: "Priya Shah",
     area: "Watford, Hertfordshire",
   },
   {
     title: "Reliable emergency response",
     quote:
-      "Our restaurant in Croydon had a serious drainage issue late evening. JetNow attended promptly, fixed the problem, and kept disruption to an absolute minimum.",
+      "Our restaurant had a serious drainage issue late evening. JetNow attended promptly, fixed the problem, and kept disruption to an absolute minimum.",
     author: "Michael Bennett",
     area: "Croydon, Greater London",
   },
@@ -50,6 +50,33 @@ export function HomeTestimonials() {
   const [progress, setProgress] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const active = testimonials[activeIndex];
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const node = sectionRef.current;
+    if (!node) return;
+
+    if (typeof IntersectionObserver === "undefined") {
+      setIsVisible(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.2, rootMargin: "0px 0px -10% 0px" },
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     if (isPaused) return;
@@ -74,9 +101,11 @@ export function HomeTestimonials() {
     setProgress(0);
   };
 
+  const visibleClass = isVisible ? "is-visible" : "";
+
   return (
-    <section className="pt-0 pb-16 md:pb-24">
-      <div className="mx-auto w-full max-w-7xl px-6">
+    <section ref={sectionRef} className="pt-0 pb-16 md:pb-24">
+      <div className={`mx-auto w-full max-w-7xl px-6 reveal-fade-up ${visibleClass}`}>
         <div className="mb-8">
           <h2 className="text-3xl font-bold uppercase tracking-tight text-brand-primary md:text-4xl">
             Trusted by homes and businesses
@@ -93,7 +122,7 @@ export function HomeTestimonials() {
               <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brand-accent">
                 {active.title}
               </p>
-              <p className="text-base leading-8 text-foreground">"{active.quote}"</p>
+              <p className="text-base leading-8 text-foreground">&ldquo;{active.quote}&rdquo;</p>
               <div className="space-y-0.5">
                 <p className="text-sm font-semibold text-foreground">{active.author}</p>
                 <p className="text-sm text-[var(--text-muted)]">{active.area}</p>

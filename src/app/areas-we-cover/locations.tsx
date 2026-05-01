@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
+import { MapPin } from "lucide-react";
 
 type CoverageArea = {
   id: string;
@@ -394,9 +395,10 @@ export function HomeLocations() {
 
           <Link
             href="/areas-we-cover"
-            className="btn-outline-brand inline-flex px-8 py-3 text-sm font-bold uppercase tracking-wide transition"
+            className="btn-outline-brand inline-flex items-center gap-2 px-8 py-3 text-sm font-bold uppercase tracking-wide transition"
           >
-            Explore all coverage areas
+            <MapPin aria-hidden="true" className="h-4 w-4" strokeWidth={2} />
+            <span>Explore all coverage areas</span>
           </Link>
         </div>
 
