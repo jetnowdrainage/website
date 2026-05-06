@@ -49,7 +49,7 @@ const services: ServiceCard[] = [
   },
   {
     id: "repairs",
-    title: "Drain Repairs and Relining",
+    title: "Drain Repairs & Relining",
     description: "Targeted repair and relining options designed to extend system life with less disruption.",
     imageSrc: "/JetNow/JN%20-%20Repairs%20Relining.jpeg",
   },
