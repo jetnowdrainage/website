@@ -61,7 +61,7 @@ export function AboutIntro() {
           className={`relative h-[320px] overflow-hidden rounded-sm md:h-[460px] ${imageRevealClass} ${visibleClass}`}
         >
           <Image
-            src="/JetNow/HomeDrainServices.jpg"
+            src="/JetNow/JN About US.jpeg"
             alt="Jet Now Drainage engineer carrying out specialist drainage work"
             fill
             sizes="(min-width: 1024px) 50vw, 100vw"
