@@ -13,7 +13,8 @@ export function HomeHero() {
         muted
         loop
         playsInline
-        preload="metadata"
+        preload="none"
+        poster="/JetNow/NewImages/JN-HomeHero.jpg"
         aria-hidden="true"
       >
         <source src="/JetNow/NewImages/Trimmed3.mp4" type="video/mp4" />
