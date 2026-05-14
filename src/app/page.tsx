@@ -7,7 +7,7 @@ import { HomeTestimonials } from "@/components/Home/HomeTestimonials";
 import { HomeCta } from "@/components/Home/HomeCta";
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: "Fast, Professional Drainage Services",
   description:
     "Jet Now Drainage provides fast, fixed-price drainage services for homes and businesses across London, Essex and Hertfordshire.",
   alternates: {
