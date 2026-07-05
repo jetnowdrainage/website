@@ -3,27 +3,7 @@
 import { FormEvent, useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { Loader2, SendHorizontal } from "lucide-react";
-
-const contactFaqs = [
-  {
-    question: "How quickly can you respond to emergency?",
-    answer: "We aim to attend within 1-2 hours. Our team respond 24 hours a day 7 days a week.",
-  },
-  {
-    question: "How long does a CCTV survey take?",
-    answer: "A typical CCTV survey takes our technicians up to one hour to complete.",
-  },
-  {
-    question: "Can I request a quote for planned drainage work?",
-    answer:
-      "Absolutely. Share your requirements in the form and our team will review the details and provide next steps.",
-  },
-  {
-    question: "Do you cover both residential and commercial properties?",
-    answer:
-      "Yes. We deliver drainage services for homes, landlords, commercial premises, and managed sites.",
-  },
-];
+import { contactFaqs } from "@/components/Contact/contact-faqs";
 
 type ContactFormValues = {
   name: string;
@@ -235,7 +215,7 @@ export function ContactFormFaq() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="group inline-flex w-full cursor-pointer items-center justify-center gap-2 border-2 border-[#ea591b] bg-[#ea591b] px-8 py-3 text-sm font-bold uppercase tracking-wide text-white transition duration-200 hover:-translate-y-0.5 hover:bg-[var(--surface)] hover:text-[#ea591b] hover:shadow-[0_10px_22px_-14px_rgba(234,89,27,0.75)] disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:translate-y-0 disabled:hover:bg-[#ea591b] disabled:hover:text-white disabled:hover:shadow-none sm:w-auto"
+                className="group inline-flex w-full cursor-pointer items-center justify-center gap-2 border-2 border-[#b14110] bg-[#b14110] px-8 py-3 text-sm font-bold uppercase tracking-wide text-white transition duration-200 hover:-translate-y-0.5 hover:bg-[var(--surface)] hover:text-[#b14110] hover:shadow-[0_10px_22px_-14px_rgba(177,65,16,0.75)] disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:translate-y-0 disabled:hover:bg-[#b14110] disabled:hover:text-white disabled:hover:shadow-none sm:w-auto"
               >
                 {isSubmitting ? (
                   <>
@@ -274,10 +254,10 @@ export function ContactFormFaq() {
                 Common questions about contacting our team and arranging drainage support.
               </p>
 
-              <div className="mt-6 divide-y divide-[var(--border)] md:hidden">
+              <div className="mt-6 max-h-[560px] divide-y divide-[var(--border)] overflow-y-auto pr-1">
                 {contactFaqs.map((faq, index) => {
                   const isOpen = openFaqIndex === index;
-                  const contentId = `contact-faq-mobile-${index}`;
+                  const contentId = `contact-faq-${index}`;
 
                   return (
                     <article key={faq.question} className="py-3 first:pt-0 last:pb-0">
@@ -288,12 +268,14 @@ export function ContactFormFaq() {
                         onClick={() => setOpenFaqIndex((current) => (current === index ? null : index))}
                         className="flex w-full items-center justify-between gap-3 text-left"
                       >
-                        <span className="text-base font-semibold text-foreground">{faq.question}</span>
+                        <span className="text-sm font-semibold text-foreground md:text-base">
+                          {faq.question}
+                        </span>
                         <span
                           aria-hidden="true"
-                          className="text-lg font-semibold text-brand-primary"
+                          className="shrink-0 text-lg font-semibold text-brand-primary"
                         >
-                          {isOpen ? "−" : "+"}
+                          {isOpen ? "\u2212" : "+"}
                         </span>
                       </button>
                       {isOpen ? (
@@ -304,15 +286,6 @@ export function ContactFormFaq() {
                     </article>
                   );
                 })}
-              </div>
-
-              <div className="mt-6 hidden divide-y divide-[var(--border)] md:block">
-                {contactFaqs.map((faq) => (
-                  <article key={faq.question} className="py-4 first:pt-0 last:pb-0">
-                    <h4 className="text-base font-semibold text-foreground">{faq.question}</h4>
-                    <p className="mt-2 text-sm leading-7 text-[var(--text-muted)]">{faq.answer}</p>
-                  </article>
-                ))}
               </div>
             </div>
           </div>

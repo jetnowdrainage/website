@@ -2,184 +2,9 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
-
-type AreaGroup = { county: string; locations: string[] };
-
-const coverageByCounty: AreaGroup[] = [
-  {
-    county: "Essex",
-    locations: [
-      "Harlow",
-      "Chelmsford",
-      "Brentwood",
-      "Basildon",
-      "Colchester",
-      "Epping",
-      "Braintree",
-      "Billericay",
-      "Southend-on-Sea",
-      "Clacton-on-Sea",
-      "Grays",
-      "Witham",
-    ],
-  },
-  {
-    county: "Hertfordshire",
-    locations: [
-      "Bishop's Stortford",
-      "Hertford",
-      "Watford",
-      "St Albans",
-      "Stevenage",
-      "Hemel Hempstead",
-      "Hitchin",
-      "Welwyn Garden City",
-      "Borehamwood",
-      "Harpenden",
-      "Cheshunt",
-      "Rickmansworth",
-    ],
-  },
-  {
-    county: "London",
-    locations: [
-      "Westminster",
-      "Camden",
-      "Islington",
-      "Southwark",
-      "Lambeth",
-      "City of London",
-      "Chelsea",
-      "Kensington",
-      "Hackney",
-      "Tower Hamlets",
-      "Holborn",
-      "Shoreditch",
-    ],
-  },
-  {
-    county: "Surrey",
-    locations: [
-      "Guildford",
-      "Woking",
-      "Epsom",
-      "Redhill",
-      "Reigate",
-      "Camberley",
-      "Farnham",
-      "Leatherhead",
-      "Dorking",
-      "Staines-upon-Thames",
-      "Esher",
-      "Godalming",
-    ],
-  },
-  {
-    county: "Greater London",
-    locations: [
-      "Barnet",
-      "Enfield",
-      "Croydon",
-      "Harrow",
-      "Hillingdon",
-      "Bromley",
-      "Newham",
-      "Ealing",
-      "Wandsworth",
-      "Richmond upon Thames",
-      "Sutton",
-      "Greenwich",
-      "Havering",
-      "Redbridge",
-    ],
-  },
-  {
-    county: "Kent",
-    locations: [
-      "Dartford",
-      "Gravesend",
-      "Maidstone",
-      "Sevenoaks",
-      "Tunbridge Wells",
-      "Medway",
-      "Ashford",
-      "Canterbury",
-      "Tonbridge",
-      "Sittingbourne",
-      "Folkestone",
-      "Rochester",
-      "Dover",
-      "Faversham",
-    ],
-  },
-  {
-    county: "Cambridgeshire",
-    locations: [
-      "Cambridge",
-      "Huntingdon",
-      "St Neots",
-      "Peterborough",
-      "Ely",
-      "Wisbech",
-      "March",
-      "Chatteris",
-      "St Ives",
-      "Soham",
-      "Whittlesey",
-      "Ramsey",
-    ],
-  },
-  {
-    county: "Bedfordshire",
-    locations: [
-      "Bedford",
-      "Luton",
-      "Leighton Buzzard",
-      "Dunstable",
-      "Biggleswade",
-      "Sandy",
-      "Ampthill",
-      "Flitwick",
-      "Kempston",
-      "Houghton Regis",
-      "Shefford",
-    ],
-  },
-  {
-    county: "Buckinghamshire",
-    locations: [
-      "Milton Keynes",
-      "Aylesbury",
-      "High Wycombe",
-      "Marlow",
-      "Beaconsfield",
-      "Amersham",
-      "Chesham",
-      "Buckingham",
-      "Princes Risborough",
-      "Wendover",
-      "Gerrards Cross",
-      "Olney",
-    ],
-  },
-  {
-    county: "Suffolk",
-    locations: [
-      "Ipswich",
-      "Bury St Edmunds",
-      "Felixstowe",
-      "Lowestoft",
-      "Sudbury",
-      "Newmarket",
-      "Stowmarket",
-      "Haverhill",
-      "Beccles",
-      "Mildenhall",
-      "Kesgrave",
-      "Aldeburgh",
-    ],
-  },
-];
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { areas as coverageByCounty } from "@/components/Areas/areas-data";
 
 export function AreasSeo() {
   const searchParams = useSearchParams();
@@ -197,7 +22,11 @@ export function AreasSeo() {
   }, []);
 
   useEffect(() => {
+    // Genuinely synchronising state from the URL (`?expandAll=1`) rather than
+    // a mount-time fallback, so this can't be replaced with a lazy `useState`
+    // initialiser the way the IntersectionObserver fallbacks below can.
     if (searchParams.get("expandAll") === "1") {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setOpenCounties(new Set(coverageByCounty.map((area) => area.county)));
     }
   }, [searchParams]);
@@ -207,6 +36,10 @@ export function AreasSeo() {
     if (!node) return;
 
     if (typeof IntersectionObserver === "undefined") {
+      // See AboutIntro.tsx: kept as an effect (not a lazy `useState`
+      // initialiser) to avoid a server/client hydration mismatch, since
+      // `IntersectionObserver` is undefined in Node during prerendering too.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setIsVisible(true);
       return;
     }
@@ -273,9 +106,16 @@ export function AreasSeo() {
                     </span>
                   </button>
                   {isOpen ? (
-                    <p id={contentId} className="mt-2 text-sm leading-7 text-[var(--text-muted)]">
-                      {area.locations.join(", ")}
-                    </p>
+                    <div id={contentId} className="mt-2 space-y-3">
+                      <p className="text-sm leading-7 text-[var(--text-muted)]">{area.towns.join(", ")}</p>
+                      <Link
+                        href={`/areas-we-cover/${area.slug}`}
+                        className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--brand-primary)] transition hover:underline"
+                      >
+                        <span>View location details</span>
+                        <ArrowRight aria-hidden="true" className="h-3.5 w-3.5" strokeWidth={2} />
+                      </Link>
+                    </div>
                   ) : null}
                 </div>
               );

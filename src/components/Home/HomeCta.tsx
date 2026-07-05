@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { business } from "@/lib/site-config";
 
-const WHATSAPP_URL = "https://wa.me/447804450233";
 const ctaButtonBaseClass =
   "inline-flex items-center justify-center gap-2 border-2 px-8 py-3 text-sm font-bold uppercase tracking-wide text-white transition duration-200";
 
@@ -18,6 +18,10 @@ export function HomeCta() {
     if (!node) return;
 
     if (typeof IntersectionObserver === "undefined") {
+      // See AboutIntro.tsx: kept as an effect (not a lazy `useState`
+      // initialiser) to avoid a server/client hydration mismatch, since
+      // `IntersectionObserver` is undefined in Node during prerendering too.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setIsVisible(true);
       return;
     }
@@ -75,16 +79,16 @@ export function HomeCta() {
               <div className="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:gap-3">
                 <Link
                   href="/contact-us"
-                  className={`${ctaButtonBaseClass} border-white bg-[#ea591b] hover:border-[#ea591b] hover:bg-white hover:text-[#ea591b]`}
+                  className={`${ctaButtonBaseClass} border-white bg-[#b14110] hover:border-[#b14110] hover:bg-white hover:text-[#b14110]`}
                 >
                   <Mail aria-hidden="true" className="h-4 w-4" strokeWidth={2} />
                   <span>Contact Us</span>
                 </Link>
                 <Link
-                  href={WHATSAPP_URL}
+                  href={business.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`${ctaButtonBaseClass} border-white bg-emerald-500 hover:border-emerald-500 hover:bg-white hover:text-emerald-500`}
+                  className={`${ctaButtonBaseClass} border-white bg-emerald-700 hover:border-emerald-700 hover:bg-white hover:text-emerald-700`}
                 >
                   <Phone aria-hidden="true" className="h-4 w-4" strokeWidth={2} />
                   <span>WhatsApp Us</span>

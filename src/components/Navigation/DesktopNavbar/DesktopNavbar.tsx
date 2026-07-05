@@ -17,7 +17,7 @@ export function DesktopNavbar() {
           <Image
             src="/JetNow/JetNowLogoCroppedNoBG.png"
             alt="Jet Now Drainage"
-            width={166}
+            width={183}
             height={66}
             priority
             className="h-auto w-auto"

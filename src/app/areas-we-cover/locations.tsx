@@ -324,7 +324,7 @@ export function HomeLocations() {
       });
     };
 
-    objectEls.forEach((objectEl, index) => {
+    objectEls.forEach((objectEl) => {
       const isInteractive = true;
       const applyStyles = () => styleMap(objectEl, isInteractive, 0);
       if (objectEl.contentDocument?.readyState === "complete") {

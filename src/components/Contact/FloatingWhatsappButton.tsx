@@ -1,11 +1,10 @@
 import Image from "next/image";
-
-const WHATSAPP_URL = "https://wa.me/447804450233";
+import { business } from "@/lib/site-config";
 
 export function FloatingWhatsappButton() {
   return (
     <a
-      href={WHATSAPP_URL}
+      href={business.whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with Jet Now Drainage on WhatsApp"

@@ -19,9 +19,17 @@ const stats = [
   },
 ];
 
+// SEOPlan.md Phase 9: `--brand-primary` (`#408ab9`) only measures 3.78:1
+// for white text, short of WCAG's 4.5:1 normal-text requirement — the
+// value/label text here never reaches the 18.66px-bold "large text" size
+// that would allow the relaxed 3:1 ratio. `#235f82` is the same blue hue
+// darkened until white text clears 6.9:1, applied locally here rather than
+// changing the shared `--brand-primary` variable, which is used all over
+// the site as plain text/border colour where it already passes comfortably.
+
 export function HomeStatsStrip() {
   return (
-    <section className="bg-brand-primary">
+    <section className="bg-[#235f82]">
       <div className="mx-auto w-full max-w-7xl px-6">
         <div className="grid grid-cols-3 gap-0 py-3 text-white sm:py-4">
           {stats.map((stat, index) => (

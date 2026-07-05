@@ -37,14 +37,14 @@ export function ServicesHero() {
           <div className="flex flex-wrap gap-3 pt-2">
             <Link
               href="/contact-us"
-              className={`${heroButtonBaseClass} bg-[#ea591b] hover:border-[#ea591b] hover:bg-white hover:text-[#ea591b]`}
+              className={`${heroButtonBaseClass} bg-[#b14110] hover:border-[#b14110] hover:bg-white hover:text-[#b14110]`}
             >
               <Phone aria-hidden="true" className="h-4 w-4" strokeWidth={2} />
               <span>Contact Us</span>
             </Link>
             <Link
               href="/areas-we-cover"
-              className={`${heroButtonBaseClass} bg-emerald-500 hover:border-emerald-500 hover:bg-white hover:text-emerald-500`}
+              className={`${heroButtonBaseClass} bg-emerald-700 hover:border-emerald-700 hover:bg-white hover:text-emerald-700`}
             >
               <MapPin aria-hidden="true" className="h-4 w-4" strokeWidth={2} />
               <span>Areas Covered</span>

@@ -1,0 +1,814 @@
+Skip to content
+Free Tools
+/
+SEO Checker
+SEO Checker
+Powered by Semrush Site Audit
+
+Run an SEO audit of your website in seconds. Find technical and on-page SEO issues across your site and get a clear report with what to fix first.
+
+https://www.jetnowdrainage.co.uk/
+For example:
+google.com
+apple.com
+2/3
+Need more than a free SEO check? Try Site Audit.
+
+SEO audit results for 
+www.jetnowdrainage.co.uk
+The SEO score for this website is 52 out of 100. We found 7 critical issues and 4 minor issues that should be addressed to improve Google rankings and AI visibility and drive more traffic to the website. Fix Your SEO Issues Now
+
+Overview
+
+Issues and Recommendations
+
+On-Page SEO
+
+Keyword Rankings
+
+Top Pages
+
+Technical SEO
+
+Page Speed & Core Web Vitals
+
+Competitors
+
+Off-Page SEO
+
+Top Backlinks
+
+Social Media
+
+Overview
+This section summarizes your site's overall SEO performance, providing insights from on-page, technical, off-page, site speed, and social signals, and highlights both strengths and priority issues to address.
+
+52SEO Score
+52SEO Score
+On-Page SEO
+70%
+Technical SEO
+80%
+Off-Page SEO
+Improve your off-page SEO
+0%
+Social Media
+60%
+SEO Score
+Semrush automated SEO audit alerts
+New
+Stop spending hours on manual audits
+With a free Semrush account you can set up a daily or weekly audits. Highlight new issues the moment they appear and track your score over time
+
+Automate SEO Audits
+Detect issues instantly
+Track historical scores
+Start SEO audit automation
+Issues and Recommendations
+This section identifies your site’s most critical SEO issues and delivers clear recommendations to resolve them and strengthen search performance.
+
+Type
+Check
+Status
+Details and Next Steps
+Sortable
+Page Speed
+
+DOM Size
+
+red-flag
+Unable to retrieve DOM Size metric. The page may be inaccessible or the API is unavailable.
+
+Page Speed
+
+Interaction to Next Paint (INP)
+
+red-flag
+Clicks and taps on the page feel noticeably delayed and sluggish. Defer non-critical JavaScript, move work off the main thread, and reduce third-party script impact to improve the user experience.
+
+Page Speed
+
+Largest Contentful Paint (LCP)
+
+red-flag
+The main image or content of the page appears very slowly. Reduce server delay, serve images in next-gen formats, and remove render-blocking CSS to provide a better user experience.
+
+Page Speed
+
+Mobile Friendliness
+
+red-flag
+Your page is not mobile friendly. Mobile users may struggle with tiny text, missing responsive layouts, or hard-to-tap buttons. Implement a responsive viewport, increase font sizes, and enlarge/space tap targets.
+
+Social Media
+
+X
+
+red-flag
+It looks like you may not be linking to an X (Twitter) profile. Add a working X link so visitors can follow your latest updates.
+
+Social Media
+
+LinkedIn
+
+red-flag
+It looks like you may not be linking to a LinkedIn page. Add a working LinkedIn link to strengthen your professional presence and build audience trust.
+
+On-Page SEO
+
+Image Alt
+
+red-flag
+Some of your images are missing alt text. Add descriptive alt text to your images.
+
+On-Page SEO
+
+Title
+
+Your title is a bit short (36 characters). Aim for 50-60 characters.
+
+Technical SEO
+
+Hreflang
+
+No hreflang tags found. If your site has language- or region-specific versions, add hreflang tags to help search engines show the right version of the page.
+
+Page Speed
+
+Performance Score
+
+Your page performs reasonably well but doesn’t fully meet Google’s targets. Compress large images, remove unused CSS/JavaScript, and enable caching to improve performance.
+
+Page Speed
+
+Total Blocking Time (TBT)
+
+Some scripts block the main thread and affect the user experience (UX). Split large JavaScript bundles and defer non-critical scripts to improve UX.
+
+You need more than a free SEO check.
+Get deeper audits, clear guidance, and ongoing monitoring that drives real results.
+Run deeper, site-wide SEO audits on more pages
+Get clear, prioritized fixes that your team can actually act on
+Track SEO health, rankings, and AI visibility over time
+Build an ongoing process that prevents future issues
+CTA image
+AI Visibility
+Track your brand's visibility across AI platforms to see where you show up, where you're missing, and where you can grow.
+
+AI Visibility Score
+
+AI Sentiment
+Find out how AI platforms talk about your brand and use those insights to shape your brand positioning and AI reputation.
+
+AI Sentiment Score
+
+On-Page SEO
+This section compiles the on-page SEO audit results, detailing assessments of key on-page elements, and pairs each issue with clear recommendations for improvement.
+
+Check
+Status
+Details and Next Steps
+Sortable
+URL
+The length of your URL is good (24 characters).
+
+
+Tips
+www.jetnowdrainage.co.uk
+Title
+Your title is a bit short (36 characters). Aim for 50-60 characters.
+
+
+Tips
+Fast, Professional Drainage Services
+Meta Description
+Your meta description is a good length (126 characters).
+
+
+Tips
+Jet Now Drainage provides fast, fixed-price drainage services for homes and businesses across London, Essex and Hertfordshire.
+H1
+You have a single H1 on the page and its a good length (58 characters).
+
+
+Tips
+Fast, professional drainage support when you need it most.
+H2-H6 Structure
+You have a good heading structure.
+
+
+Tips
+Heading
+Frequency
+H2
+4
+H3
+0
+H4
+0
+H5
+0
+H6
+0
+Heading
+Text
+H2
+Complete Drainage Solutions
+
+H2
+AREAS WE COVER
+
+H2
+Trusted by homes and businesses
+
+H2
+Rapid. Trusted. Professional.
+
+Image Alt
+red-flag
+Some of your images are missing alt text. Add descriptive alt text to your images.
+
+
+Tips
+Content
+You have a good text-to-code ratio (46.02%)
+
+
+Tips
+Your page has an appropriate amount of content (921 words).
+
+
+Tips
+Keyword Density
+Analyze the keyword density report to ensure the highest density words and phrases are keywords you want to rank for.
+
+
+Tips
+Keyword
+Instances
+Density
+drainage
+
+12
+3.97%
+drain
+
+8
+2.65%
+professional
+
+6
+1.99%
+jetnow
+
+5
+1.66%
+services
+
+5
+1.66%
+coverage
+
+4
+1.32%
+fast
+
+4
+1.32%
+essex
+
+3
+0.99%
+experience
+
+3
+0.99%
+london
+
+3
+0.99%
+quickly
+
+3
+0.99%
+rapid
+
+3
+0.99%
+response
+
+3
+0.99%
+solutions
+
+3
+0.99%
+years
+
+3
+0.99%
+Keyword Rankings
+This section provides a list of the website's top SEO keywords according to the organic traffic they drive to the site.
+
+Not ranking yet?
+
+Find high-value keywords your site can rank for with Semrush.
+
+Top Pages
+This section provides a list of the website's top pages according to the organic traffic they drive to the site.
+
+Want to start getting traffic?
+
+Find the right topics, optimize your pages, and turn them into steady traffic sources with Semrush.
+
+Technical SEO
+This section presents the results of the technical SEO audit, covering elements like crawlability, indexation, security, and structured data, along with recommendations to resolve any issues.
+
+Check
+Status
+Details and Next Steps
+Sortable
+Favicon
+Your favicon is valid and accessible.
+
+Tips
+/favicon.ico
+Noindex
+Your page is properly configured for search engine indexing.
+
+Tips
+Sitemap
+Your website contains a valid XML sitemap.
+https://www.jetnowdrainage.co.uk/sitemap.xml
+
+Tips
+Hreflang
+No hreflang tags found. If your site has language- or region-specific versions, add hreflang tags to help search engines show the right version of the page.
+
+Tips
+Language
+Your website language is properly declared.
+
+Tips
+en
+Canonical
+Your canonical tag is properly implemented and points to an appropriate URL.
+
+Tips
+https://www.jetnowdrainage.co.uk
+Robots.txt
+Your robots.txt file is properly configured and accessible.
+
+Tips
+https://www.jetnowdrainage.co.uk/robots.txt
+Structured Data
+Your page contains valid structured data.
+LocalBusiness
+
+Tips
+Page Speed & Core Web Vitals
+This section shows your page load time, Core Web Vitals, and other speed signals that affect search results and user experience. You get a clear assessment, note any issues, and learn the exact steps to make your pages faster and strengthen overall SEO impact.
+
+All recommendations follow Google’s performance guidelines.
+
+Check
+Status
+Details and Next Steps
+Sortable
+Performance Score
+Your page performs reasonably well but doesn’t fully meet Google’s targets. Compress large images, remove unused CSS/JavaScript, and enable caching to improve performance.
+Performance Score: 64/100
+
+Tips
+Mobile Friendliness
+red-flag
+Your page is not mobile friendly. Mobile users may struggle with tiny text, missing responsive layouts, or hard-to-tap buttons. Implement a responsive viewport, increase font sizes, and enlarge/space tap targets.
+Mobile Friendliness score: 1/3
+
+Tips
+Largest Contentful Paint (LCP)
+red-flag
+The main image or content of the page appears very slowly. Reduce server delay, serve images in next-gen formats, and remove render-blocking CSS to provide a better user experience.
+LCP: 5.9s
+
+Tips
+Interaction to Next Paint (INP)
+red-flag
+Clicks and taps on the page feel noticeably delayed and sluggish. Defer non-critical JavaScript, move work off the main thread, and reduce third-party script impact to improve the user experience.
+INP: 5.906s
+
+Tips
+Cumulative Layout Shift (CLS)
+Page elements are visually stable while loading, so elements don’t jump around upon page load.
+CLS: 0
+
+Tips
+Time to First Byte (TTFB)
+The server responds quickly, so users start receiving data almost instantly.
+TBT: 0.002s
+
+Tips
+First Contentful Paint (FCP)
+The first text or image on the page appears almost instantly, giving users feedback that the page is loading.
+FCP: 0.3s
+
+Tips
+Speed Index
+Visual content appears very quickly and users see your page almost instantly.
+Speed Index: 2.3s
+
+Tips
+Total Blocking Time (TBT)
+Some scripts block the main thread and affect the user experience (UX). Split large JavaScript bundles and defer non-critical scripts to improve UX.
+TBT: 0.218s
+
+Tips
+DOM Size
+red-flag
+Unable to retrieve DOM Size metric. The page may be inaccessible or the API is unavailable.
+
+Tips
+Need help fixing these issues?
+Semrush One gives you the tools to fix these issues and improve your SEO and AI visibility.
+Run deeper, site-wide SEO audits on more pages
+See simple explanations and recommended fixes
+Analyze competitor traffic and AI search visibility
+Track rankings and AI visibility together as you improve
+CTA image
+Competitors
+This section provides a list of the website's top competitors according to the percentage of keywords both sites are competing for in Google search.
+
+You need to start competing to have competitors.
+
+Find the right keywords for your website and start ranking for them with Semrush.
+
+Off-Page SEO
+This section compiles the off-page SEO audit results, evaluating backlinks, referring domains, Authority Score, and the balance between dofollow and nofollow links, and provides focused recommendations to strengthen and diversify your link profile.
+
+Check
+Status
+Details and Next Steps
+Sortable
+Authority Score
+
+Issue assessment
+
+Authority Score: N/A
+
+Competitor average: N/A
+
+
+Tips
+Backlinks
+
+Issue assessment
+
+Backlinks: N/A
+
+Competitor average: N/A
+
+
+Tips
+Referring Domains
+
+red-flag
+Issue assessment
+
+Referring domains: N/A
+
+Competitor average: N/A
+
+
+Tips
+Nofollow vs Dofollow
+
+Issue assessment
+
+Nofollow %: N/A
+
+Dofollow %: N/A
+
+
+Tips
+Top Backlinks
+This section provides a list of the website's top backlinks according to the Authority Score of the linking site.
+
+Struggling to earn backlinks?
+
+Find opportunities to build highly relevant backlinks with Semrush.
+
+Social Media
+This section compiles the social media audit results, confirming whether links to Facebook, YouTube, Instagram, X, and LinkedIn are present, and offers recommendations to add any missing profiles.
+
+Check
+Status
+Details and Next Steps
+Sortable
+Facebook
+
+Your page appears to contain a link to your Facebook page.
+
+https://facebook.com/jetnowdrainage
+
+Tips
+YouTube
+
+Your page appears to contain a link to your YouTube page.
+
+https://youtube.com/@jetnowdrainage
+
+Tips
+Instagram
+
+Your page appears to contain a link to your Instagram profile.
+
+https://instagram.com/jetnow_drainage
+
+Tips
+X
+
+red-flag
+It looks like you may not be linking to an X (Twitter) profile. Add a working X link so visitors can follow your latest updates.
+
+
+Tips
+LinkedIn
+
+red-flag
+It looks like you may not be linking to a LinkedIn page. Add a working LinkedIn link to strengthen your professional presence and build audience trust.
+
+
+Tips
+Not sure where to start?
+Get a clear starting point and a simple plan to work through your SEO fixes step by step.
+See which issues to fix first with a clear, prioritized checklist
+Group tasks by type so you can work through fixes efficiently
+Run regular audits to track what’s fixed and what’s not
+Connect your fixes to real outcomes like visibility and traffic
+CTA image
+How to Use the Free SEO Checker
+1
+
+Enter a domain or website URL in the field above
+2
+
+Click “Analyze Website” to run SEO checks on your site
+3
+
+Review the SEO report and start fixing critical issues
+What Is Semrush’s SEO Checker?
+What Is Semrush’s SEO Checker?
+Semrush’s SEO Checker is a free SEO audit tool that scans your website and finds critical SEO issues that could limit your search performance.
+
+The SEO Checker returns an overall SEO score, a prioritized to-do list, and a detailed report that shows both the elements that passed inspection and those that need attention.
+
+The SEO audit analyzes meta tags, headings, keywords, backlinks, page speed, mobile friendliness, Core Web Vitals, social signals, and more.
+
+Improvements to these elements help search engines and AI search platforms better understand, trust, and surface your content when answering users’ questions.
+
+Use the insights to implement high-impact fixes first and track quick wins.
+
+Turn Your SEO Check Into a Full Site Audit
+For a deeper, site-wide SEO analysis, upgrade to Semrush’s Site Audit tool. Site Audit crawls your entire site, checks for hundreds of technical and on-page issues, tracks progress over time, and lets you schedule automatic audits.
+
+The free SEO Checker provides a quick snapshot of your SEO health, while Site Audit provides a full roadmap for long-term SEO success.
+
+Turn Your SEO Check Into a Full Site Audit
+Why Check Your Website’s SEO?
+Why Check Your Website’s SEO?
+You should check your website’s SEO to understand how well it’s positioned to perform in Google search, identify issues that may be holding it back, and learn exactly how to fix them to improve your rankings and drive more traffic.
+
+As search evolves toward more AI-driven results and answer experiences, a healthy, well-structured site also increases the chances that your pages can be used, cited, or referenced by AI systems when they generate responses.
+
+An SEO audit reveals hidden problems like missing titles, slow pages, and indexing issues. Fixing these problems helps Google and AI search platforms find your pages and keeps visitors engaged.
+
+Regular audits also confirm what you’re doing right. Strong scores for speed, on-page SEO, off-page SEO, mobile friendliness, and social visibility mean your strategy is working.
+
+If you’re new to SEO, use the report as a learning tool. Start by fixing high-priority technical errors. Then optimize your page titles, descriptions, and headings. Finally, follow step-by-step recommendations to improve speed and mobile scores.
+
+Repeating this process regularly helps you measure progress, refine your SEO strategy, and attract more qualified traffic. Upgrading to Semrush’s Site Audit tool allows you to schedule regular, automated audits and stay apprised of your SEO health.
+
+Worried your website has SEO issues you’re not seeing?
+
+Go beyond a one-off check and feel confident you’re fixing what matters most:
+
+Full-Site SEO and Visibility Scans
+
+Crawl your entire site to uncover issues that can limit search visibility.
+
+Prioritized Fixes for Faster Results
+
+Focus on the highest-impact issues with clear priorities based on severity.
+
+Regular Audits and Progress Reports
+
+Run recurring audits and track improvements over time.
+
+Actionable Guidance for Teams
+
+Turn issues into a backlog for dev and content teams with specific fixes.
+
+What Does Our SEO Checker Analyze?
+What Does Our SEO Checker Analyze?
+Our free SEO Checker analyzes on-page, off-page, technical, and performance factors to give you a complete view of your site’s SEO health.
+
+On-page SEO: We check SEO titles, meta descriptions, headings, keywords, and content to confirm each page is optimized according to best practices.
+Off-page signals: We review backlinks, referring domains, and authority scores to assess your site’s authority and trust in the eyes of search engines.
+Technical SEO: We test crawlability, indexability, status codes, robots directives, sitemap coverage, canonical tags, and structured data so nothing blocks search engines and AI platforms from finding and reading your content.
+Site performance: We analyze page loading speed, mobile friendliness, and Core Web Vitals to ensure a fast, user-friendly experience.
+Social media visibility: We check to ensure you’re leveraging social media to reach your target audience and build brand awareness and authority.
+After the scan, you’ll receive an overall SEO score as well as a list of recommendations. Each item includes clear instructions on what to fix and how to fix it, so you can improve rankings with confidence.
+
+How to Use Your Site Audit Report
+Here are a few ways to use Semrush’s free SEO audit report:
+Fix critical SEO issues
+Resolve crawl blocks, indexing problems, and other high-priority issues so search engines can find, crawl, and index every page.
+Boost site speed and performance
+Follow the report’s page-speed tips, such as compressing images, streamlining code, and enabling caching to improve load times and user experience.
+Optimize meta tags and on-page SEO elements
+Update titles, meta descriptions, headings, and alt text to align with best practices and improve click-through rates.
+Identify keyword and content opportunities
+Use the keyword ranking reports to create fresh pages or expand thin content that can capture additional traffic and better match the kinds of questions people ask in both search engines and AI search platforms.
+Strengthen off-page SEO
+Review backlink insights, remove harmful links, and target high-value sites for outreach to build authority.
+Validate your SEO efforts
+High scores and very few issues confirm that your current optimization efforts are working, giving you confidence to stay the course.
+Grow your SEO knowledge
+Use analyzed elements and identified issues as a learning roadmap. Research these topics and implement best practices to deepen your expertise.
+Track progress over time
+Re-run the SEO audit after each round of fixes to see your SEO score climb and to keep your site optimized for success.
+Who Will Benefit Most from the Website SEO Checker?
+Who Will Benefit Most from the Website SEO Checker?
+The following groups will benefit most from using Semrush’s free SEO checker:
+
+Beginners and Small Business Owners: Get a quick, plain-language assessment of your website. The free SEO report highlights issues, explains why they're important, and provides recommendations for how to fix them. No advanced SEO knowledge is required.
+Intermediate SEOs and Marketers: Validate existing optimization efforts and uncover overlooked gaps. The SEO audit report offers a comprehensive, prioritized checklist, letting you optimize your SEO efforts to improve your strategy and demonstrate results to stakeholders.
+Agencies and In-House SEO Teams: Run consistent audits across multiple sites or sections, prioritize work for developers and content teams, and use shareable reports to prove impact to clients and internal stakeholders.
+Think something might be wrong with your SEO?
+
+Upgrade to Site Audit to turn that hunch into clear answers and specific fixes:
+
+Comprehensive SEO Checks
+
+Run 140+ technical and on-page checks to find issues that can limit search visibility.
+
+AI Search Health Monitoring
+
+Spot issues that can reduce your visibility in LLMs and AI-driven results.
+
+Site-Wide Reporting
+
+Track site scans, rankings, and AI visibility so you can monitor changes over time.
+
+Clear Priorities and Next Steps
+
+Get clear explanations, fix-first priorities, and practical recommendations.
+
+What Issues Will Our SEO Audit Check For?
+Our website SEO audit will identify issues with the following:
+Meta tags and snippets
+Missing and poorly written titles and descriptions confuse search engines and lower click-through rates. We flag tags that are too short, too long, or blocked from indexing.
+Content depth and keyword usage
+Thin pages and copied text struggle to rank. The audit highlights low-word-count pages so you can expand or consolidate.
+Heading and page structure
+Out-of-order H1–H3 tags, unoptimized heading structures, and complex URLs make crawling harder. We point out heading gaps, URL issues, and canonical problems.
+Technical SEO
+Slow server response, mixed HTTPS, and oversized HTML files hurt visibility. The report lists status-code errors and other server issues that need a fix.
+Page speed and Core Web Vitals
+Large images, render-blocking scripts, and heavy resources slow your site. We surface the performance issues so you can optimize for faster load times and better user experience.
+Mobile usability
+Text that's too small, tap targets that are too close, and content that's wider than the screen push visitors away. The audit highlights mobile issues so you can meet Google's mobile-friendly standards.
+Indexing and crawl access
+Robots.txt blocks, noindex tags, and orphan pages stop search engines from seeing your content. We list every barrier so you can remove it.
+Backlink and trust signals
+A weak or spam-heavy link profile drags down authority. The audit shows backlink gaps, nofollow distribution issues, and social share visibility so you can strengthen off-page SEO.
+Why Choose Semrush’s SEO Checker?
+Why Choose Semrush’s SEO Checker?
+You should choose Semrush’s SEO checker over other SEO checkers because it combines a more in-depth audit with practical, plain-language recommendations you can act on right away.
+
+The audit reviews on-page, off-page, technical, social, and page performance factors in one scan and provides actionable recommendations for how to fix any issues identified in the report.
+
+This website analysis tool also uses Semrush’s extensive keyword and backlink databases for precise insights, and explains every issue in plain language so both beginners and pros can act with confidence.
+
+You can run up to three checks a day for free, or upgrade to Semrush’s Site Audit to access deeper scans, more SEO checks, and even more critical insights.
+
+What Can You Achieve with Semrush’s Site Audit?
+What Can You Achieve with Semrush’s Site Audit?
+You can achieve better search visibility, steady organic traffic growth, and improvements in real business outcomes like sign ups, leads, and sales with Semrush’s Site Audit.
+
+Regular audits help you move from one-off checks to ongoing improvements that actually show up in your KPIs.
+
+With Site Audit, you can:
+
+Ensure your most important pages are discoverable and visible for the searches that drive customers
+Remove technical issues that slow pages down and hurt sign ups, conversions, and checkouts
+Make your content easier for search engines and AI platforms to understand so it can rank for more relevant queries
+Turn issues into a clear, prioritized backlog for dev and content teams so fixes get implemented faster
+Show proof that your SEO work is improving website health, visibility, and business outcomes over time
+Frequently Asked Questions
+Is the SEO Checker Free to Use?
+What’s the Difference Between the Free SEO Checker and Semrush’s Site Audit?
+How Often Should I Run an SEO Audit on My Website?
+Will Running a Website Audit Affect My Rankings?
+Can Semrush’s SEO Checker Help with AI Search Visibility?
+Trusted by the world’s leading brands
+logos
+Not sure how to turn SEO checks into real progress?
+
+Upgrade to Site Audit to turn your findings into a focused improvement plan you can actually use:
+
+Prioritized Tasks and Worklists
+
+Get a ranked list of tasks so you always know what to tackle next.
+
+Issues Grouped for Easy Assignment
+
+See issues grouped by type so you can quickly assign work to dev or content teams.
+
+Trend Reports and Progress Tracking
+
+Track site health and issue counts over time to see how fixes change your results.
+
+Recurring Audits to Stay on Track
+
+Run scheduled crawls to catch new issues early and maintain previous improvements.
+
+Try Semrush's Other Free Tools
+SEO & AI SEO Tools
+SEO Checker
+Website Authority Checker
+AI Search Visibility Checker
+Keyword Tool
+Keyword Checker
+Keyword Rank Checker
+Keyword Search Volume Checker
+Backlink Checker
+Website Traffic Checker
+Google SERP Simulator
+SERP Checker
+Plagiarism Checker
+Sitemap Generator
+Competitor Finder
+AI Writing Tools
+AI Text Generator
+Paragraph Rewriter
+AI Title Generator
+Paraphrasing Tool
+Sentence Rewriter
+Word Counter Tool
+Summary Generator
+Local SEO Tools
+Google Business Profile Description Generator
+Google Review Link Generator
+Google Review Template and QR Code Generator
+
+Get started with Semrush today
+Try Semrush free for seven days. Cancel anytime.
+
+Semrush
+
+Semrush One
+Features
+Pricing
+Free Trial
+Compare Semrush
+Success Stories
+Stats and Facts
+Affiliate Program
+More tools
+
+Enterprise SEO
+Enterprise AIO
+Enterprise SI
+Insights24
+Mfour
+App Center
+Top Websites
+Free Tools
+Sensor
+Company
+
+About Us
+News
+Careers
+Partners
+Semrush Select
+Global Issues Index
+Do not sell my personal info
+Contact Us
+Support
+
+Knowledge Base
+Academy
+Semrush API
+Community
+
+Semrush Blog
+Webinars
+Ambassador Program
+© 2026 Semrush Holdings. All rights reserved.
+
+Privacy Policy
+Terms of Service
+Cookies Settings
+Free SEO Checker: Check for SEO & AI Search Issues
