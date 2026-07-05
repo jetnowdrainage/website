@@ -7,7 +7,7 @@ export function ComingSoonScreen() {
         <Image
           src="/JetNow/JetNowLogoCroppedNoBG.png"
           alt="Jet Now Drainage"
-          width={240}
+          width={267}
           height={96}
           priority
           className="mx-auto h-auto w-auto"

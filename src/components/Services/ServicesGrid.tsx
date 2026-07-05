@@ -3,69 +3,7 @@
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
-type ServiceCard = {
-  id: string;
-  title: string;
-  description: string;
-  imageSrc: string;
-  imageClassName?: string;
-};
-
-const services: ServiceCard[] = [
-  {
-    id: "internal-unblocks",
-    title: "Internal Unblocks",
-    description:
-      "Fast clearance for blocked toilets, sinks, baths and internal waste pipework with clean, careful working practices.",
-    imageSrc: "/JetNow/NewImages/JN-InternalUnblocks.jpg",
-  },
-  {
-    id: "external-unblocks",
-    title: "External Unblocks",
-    description:
-      "We clear blocked gullies, outside drains and shared runs to restore flow and reduce repeat issues.",
-    imageSrc: "/JetNow/NewImages/JN-ExternalUnblocks.jpg",
-  },
-  {
-    id: "tanker-services",
-    title: "Tanker Services",
-    description:
-      "For heavy-duty jobs, our tanker support removes high volumes of waste to keep domestic and commercial clients free-flowing.",
-    imageSrc: "/JetNow/NewImages/JN-TankerUnblocks.jpeg",
-  },
-  {
-    id: "cctv-surveys",
-    title: "CCTV Drain Surveys",
-    description:
-      "Our engineers use CCTV drain cameras to inspect pipework and provide clear findings on condition and fault locations.",
-    imageSrc: "/JetNow/NewImages/JN-CCTVDrainSurveys.jpg",
-  },
-  {
-    id: "jetting",
-    title: "High-Pressure Jetting",
-    description: "Powerful water jetting to remove build-up, grease and debris from drainage pipework.",
-    imageSrc: "/JetNow/NewImages/highpressurejetting.jpeg",
-  },
-  {
-    id: "repairs",
-    title: "Drain Repairs & Relining",
-    description: "Targeted repair and relining options designed to extend system life with less disruption.",
-    imageSrc: "/JetNow/JN%20-%20Repairs%20Relining.jpeg",
-  },
-  {
-    id: "emergency",
-    title: "24/7 Emergency Response",
-    description: "We aim to be on site within 1-2 hours to prevent disruption to your home or business.",
-    imageSrc: "/JetNow/NewImages/draindescaling.jpeg",
-  },
-  {
-    id: "drain-cleaning",
-    title: "Drain Descaling",
-    description: "Descaling and maintaining your drainage system expands the lifespan and decreases the likelihood of blockages. We offer warranty on all descaling works.",
-    imageSrc: "/JetNow/JN%20-%20DrainDescaling2.jpeg",
-  },
-];
+import { services } from "@/components/Services/services-data";
 
 export function ServicesGrid() {
   const [activeCardId, setActiveCardId] = useState<string | null>(null);
@@ -88,6 +26,10 @@ export function ServicesGrid() {
     if (!node) return;
 
     if (typeof IntersectionObserver === "undefined") {
+      // See AboutIntro.tsx: kept as an effect (not a lazy `useState`
+      // initialiser) to avoid a server/client hydration mismatch, since
+      // `IntersectionObserver` is undefined in Node during prerendering too.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setIsHeadingVisible(true);
       return;
     }
@@ -110,6 +52,10 @@ export function ServicesGrid() {
 
   useEffect(() => {
     if (typeof IntersectionObserver === "undefined") {
+      // See AboutIntro.tsx: kept as an effect (not a lazy `useState`
+      // initialiser) to avoid a server/client hydration mismatch, since
+      // `IntersectionObserver` is undefined in Node during prerendering too.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setVisibleCardIndices(new Set(services.map((_, index) => index)));
       return;
     }
@@ -229,21 +175,32 @@ export function ServicesGrid() {
                         sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                         className={service.imageClassName ?? "object-cover"}
                       />
-                      <div className="absolute inset-0 bg-brand-primary/95" />
+                      {/* SEOPlan.md Phase 9: #235f82, not bg-brand-primary — see HomeStatsStrip.tsx */}
+                      <div className="absolute inset-0 bg-[#235f82]/95" />
                       <div className="absolute inset-0 flex items-end p-3 sm:p-5">
                         <div className="w-full space-y-1.5 sm:space-y-2">
                           <p className="text-sm font-bold text-white sm:text-lg">{service.title}</p>
                           <p className="text-[11px] leading-5 text-slate-200 sm:text-sm sm:leading-6">
                             {service.description}
                           </p>
-                          <Link
-                            href={`/contact-us?service=${encodeURIComponent(service.title)}${isMobile ? "#contact-form" : ""}`}
-                            onClick={(event) => event.stopPropagation()}
-                            onPointerDown={(event) => event.stopPropagation()}
-                            className="inline-flex self-center rounded-full border border-white/45 bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-white backdrop-blur-sm transition hover:bg-white hover:text-brand-primary sm:px-4 sm:py-1.5 sm:text-xs"
-                          >
-                            Book service
-                          </Link>
+                          <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                            <Link
+                              href={`/services/${service.slug}`}
+                              onClick={(event) => event.stopPropagation()}
+                              onPointerDown={(event) => event.stopPropagation()}
+                              className="inline-flex self-center rounded-full border border-white/45 bg-transparent px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-white backdrop-blur-sm transition hover:bg-white hover:text-brand-primary sm:px-4 sm:py-1.5 sm:text-xs"
+                            >
+                              More info
+                            </Link>
+                            <Link
+                              href={`/contact-us?service=${encodeURIComponent(service.title)}${isMobile ? "#contact-form" : ""}`}
+                              onClick={(event) => event.stopPropagation()}
+                              onPointerDown={(event) => event.stopPropagation()}
+                              className="inline-flex self-center rounded-full border border-white/45 bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-white backdrop-blur-sm transition hover:bg-white hover:text-brand-primary sm:px-4 sm:py-1.5 sm:text-xs"
+                            >
+                              Book service
+                            </Link>
+                          </div>
                         </div>
                       </div>
                     </div>

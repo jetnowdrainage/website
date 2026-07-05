@@ -12,6 +12,13 @@ export function ThemeToggleButton({ className = "" }: ThemeToggleButtonProps) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    // Standard next-themes hydration-safe pattern: the server always renders
+    // `mounted: false` (since `resolvedTheme` is unknown until the client
+    // reads the persisted theme), so this must flip via an effect after
+    // mount rather than a lazy `useState` initialiser, which would return
+    // `true` during server rendering too and reintroduce the hydration
+    // mismatch this pattern exists to prevent.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
   }, []);
 

@@ -30,6 +30,13 @@ export function AboutIntro() {
     if (!node) return;
 
     if (typeof IntersectionObserver === "undefined") {
+      // `isVisible` must start `false` so the server-rendered HTML matches the
+      // client's first render (Node has no `IntersectionObserver`, so a lazy
+      // `useState` initialiser would compute a different value at build time
+      // than in a real browser, causing a hydration mismatch). This branch
+      // only runs post-mount, for the handful of old browsers with no
+      // `IntersectionObserver` support, to reveal the content immediately.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setIsVisible(true);
       return;
     }

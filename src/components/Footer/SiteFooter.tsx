@@ -46,7 +46,7 @@ export function SiteFooter() {
               <Image
                 src="/JetNow/JetNowLogoCroppedNoBG.png"
                 alt="Jet Now Drainage"
-                width={145}
+                width={161}
                 height={58}
                 className="h-auto w-auto"
               />

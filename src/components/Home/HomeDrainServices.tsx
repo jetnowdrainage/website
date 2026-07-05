@@ -32,6 +32,10 @@ export function HomeDrainServices() {
     if (!node) return;
 
     if (typeof IntersectionObserver === "undefined") {
+      // See AboutIntro.tsx: kept as an effect (not a lazy `useState`
+      // initialiser) to avoid a server/client hydration mismatch, since
+      // `IntersectionObserver` is undefined in Node during prerendering too.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setIsVisible(true);
       return;
     }

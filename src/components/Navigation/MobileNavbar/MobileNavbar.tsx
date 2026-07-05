@@ -41,7 +41,7 @@ export function MobileNavbar() {
           <Image
             src="/JetNow/JetNowLogoCroppedNoBG.png"
             alt="Jet Now Drainage"
-            width={146}
+            width={161}
             height={58}
             priority
             className="h-auto w-auto"
@@ -108,7 +108,10 @@ export function MobileNavbar() {
               <a
                 href="tel:+447804450233"
                 onClick={() => setIsOpen(false)}
-                className="mt-2 inline-flex items-center justify-center rounded-md bg-brand-primary px-4 py-3 text-sm font-semibold text-white transition hover:opacity-90"
+                // See HomeStatsStrip.tsx (SEOPlan.md Phase 9) for why this uses a
+                // darkened `#235f82` instead of `bg-brand-primary` directly: white
+                // text on the raw brand blue only reaches 3.78:1, short of WCAG AA.
+                className="mt-2 inline-flex items-center justify-center rounded-md bg-[#235f82] px-4 py-3 text-sm font-semibold text-white transition hover:opacity-90"
               >
                 <Phone aria-hidden="true" className="mr-2 h-4 w-4" strokeWidth={2} />
                 <span>Call 07804 450 233</span>
